@@ -20,30 +20,48 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'casavaldesicorporate' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'casavaldesicorporate' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+<div class="header">
+	<nav class="navbar navbar-custom">
+		<div class="valign-wrapper overlay">
+			<div class="container-fluid cf-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri() . '/img/homepage/logo-diaconia.png' ?>" width="61px" height="auto"></a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#" class="active">Homepage</a></li>
+						<li><a href="#">Foresterie</a></li>
+						<li><a href="#">Solidarietà</a></li>
+						<li><a href="#">Sostenibilità</a></li>
+						<li><a href="#">Il Blog</a></li>
+						<li><a href="#">Contatti</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+						<li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+						<li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+						<li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ITA<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">ENG</a></li>
+		            <li><a href="#">FRA</a></li>
+		          </ul>
+		        </li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+			<div class="central-logo text-center">
+				<img src="<?php echo get_template_directory_uri() . '/img/homepage/logo-casevaldesi.png'?>" alt="" />
+				<h1>Vocazione all'accoglienza</h1>
+			</div>
+		</div>
+	</nav>
+</div>

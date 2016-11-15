@@ -105,7 +105,9 @@ function casavaldesicorporate_scripts() {
 	wp_enqueue_style( 'casavaldesicorporate-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/layouts/bootstrap.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/layouts/main.css' );
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 	wp_enqueue_script( 'casavaldesicorporate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/layouts/jquery-3.1.1.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/layouts/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'casavaldesicorporate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

@@ -1,0 +1,260 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@font-face {
+    font-family: 'white_larch_personal_use_onRg';
+    src: url('../font/whitelarch/whitelarch_personal_use-webfont.woff2') format('woff2'),
+         url('../font/whitelarch/whitelarch_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+.valign-wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+  &.overlay {
+    background: rgba(0,0,0,.5);
+  }
+  .valign{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+.cf-custom {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+.navbar {
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+.navbar-custom {
+  background: url('../img/homepage_visual.jpg') no-repeat;
+  top: 0;
+  left: 0;
+  background-position: 0 -200px;
+  background-size: cover;
+  height: 750px;
+  z-index: 5;
+}
+.navbar-nav {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-top: 20px;
+  margin-left: 50px;
+  li {
+    margin-left: 50px;
+    a {
+      color: #fff;
+      font-weight: 300;
+      &.active {
+        font-weight: bold;
+      }
+      &.active, &:hover, &:focus {
+        color: #fed43c;
+        background: none !important;
+      }
+    }
+  }
+}
+.navbar-right {
+  li {
+    margin-left: 5px;
+    &.dropdown {
+      margin-left: 100px;
+    }
+    i:hover {
+      color: #fed43c;
+    }
+    img {
+      height: 18px;
+      &:hover {
+      }
+    }
+  }
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: none !important;
+  border: none !important;
+}
+.dropdown-menu {
+  background: none !important;
+  border: none !important;
+  text-align: right;
+  box-shadow: none !important;
+  margin-right: -15px !important;
+}
+.caret {
+  position: absolute !important;
+  top: 30px !important;
+  left: 40px !important;
+}
+.central-logo {
+  padding-top: 80px;
+  img {
+    margin-bottom: 30px;
+  }
+  h1 {
+    color: #fff;
+    font-family: 'white_larch_personal_use_onRg';
+    font-weight: bold;
+    font-size: 70px;
+  }
+}
+.section1 {
+  background: #e6eaed;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  h2 {
+    text-transform: uppercase;
+    color: #3f4b56;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 300;
+  }
+  p {
+    color: #3f4b56;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+  }
+  .cf-custom-section1 {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .text-section1 {
+    z-index: 7;
+    position: relative;
+  }
+  .back-right {
+    background: url('../img/grafica.png') no-repeat;
+    position: absolute;
+    top: -120%;
+    right: 0;
+    width: 700px;
+    height: 700px;
+    opacity: .8;
+  }
+  .back-left {
+    background: url('../img/grafica_low.png') no-repeat;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 700px;
+    height: 700px;
+    opacity: .8;
+  }
+}
+.button-section1 {
+  a {
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #7fa2a8;
+  }
+}
+.section2 {
+  position: relative;
+  z-index: 9;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #fff;
+}
+.img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
+  background: url('../img/homepage/tuttelecase_valdesi.png') no-repeat #3f4b56;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 49.9999%;
+  float: left;
+  margin-right: 40px;
+}
+.img-categoria1 {
+  background: url('../img/homepage/citta_arte.png') no-repeat #e36b5e;
+}
+.img-categoria2 {
+  background: url('../img/homepage/montagna.png') no-repeat #99bb59;
+}
+.img-categoria3 {
+  background: url('../img/homepage/iconamare.png') no-repeat #8db4bb;
+}
+.text-categoria {
+  p {
+    margin-top: 30px;
+    font-size: 22px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+.section3 {
+    background: url('../img/map.png') no-repeat;
+    background-size: cover;
+    background-position: 0 -200px;
+    position: relative;
+    z-index: 9;
+    height: 500px;
+}
+.first-image-section4 {
+  background: url('http://www.timetolove.it/wp-content/uploads/2016/04/fare-del-bene.jpg');
+  background-position: center;
+  background-size: cover;
+  border-right: 5px solid #fff;
+  padding: 0 !important;
+
+  h2 {
+    padding-top: 120px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #e4c76b;
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  p {
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  a {
+    display: block;
+    color: #e4c76b;
+    background: trasparent;
+    border-radius: 5px;
+    border: 2px solid #e4c76b;
+    padding: 10px 5px;
+    width: 250px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+    &:hover {
+      background: #fff;
+      border: 2px solid #fff;
+      color: #3f4b56;
+    }
+    }
+}
+.second-image-section4, .third-image-section4 {
+  border-right: none !important;
+}
+.third-image-section4 {
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+.image-buono {
+  background: url('../img/homepage/iconabuonoregalo.png')
+}
