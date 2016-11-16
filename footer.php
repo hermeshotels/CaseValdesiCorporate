@@ -15,17 +15,21 @@
     <div class="valign">
       <div class="container-fluid">
         <div class="col-xs-12 loghi-footer">
-          <img src="<?php echo get_template_directory_uri() . '/img/homepage/logodiaconia-footer.png'?>" alt="" width="105px" height="auto"/>
-          <img src="<?php echo get_template_directory_uri() . '/img/homepage/logoforesteria-footer.png'?>" alt="" width="204px" height="auto" class="second-logo-footer"/>
+          <div class="first-div-logo-footer col-xs-6">
+            <img src="<?php echo get_template_directory_uri() . '/img/homepage/logodiaconia-footer.png'?>" alt=""/>
+          </div>
+          <div class="second-div-logo-footer col-xs-6">
+            <img src="<?php echo get_template_directory_uri() . '/img/homepage/logoforesteria-footer.png'?>" alt="" class="second-logo-footer col-xs-6"/>
+          </div>
         </div>
         <div class="col-xs-12 menu-footer">
-          <ul>
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Foresterie</a></li>
-            <li><a href="#">Solidarietà</a></li>
-						<li><a href="#">Sostenibilità</a></li>
-						<li><a href="#">Il Blog</a></li>
-						<li><a href="#">Contatti</a></li>
+          <ul class="col-xs-12">
+            <li class="col-xs-2"><a href="#">Homepage</a></li>
+            <li class="col-xs-2"><a href="#">Foresterie</a></li>
+            <li class="col-xs-2"><a href="#">Solidarietà</a></li>
+						<li class="col-xs-2"><a href="#">Sostenibilità</a></li>
+						<li class="col-xs-2"><a href="#">Il Blog</a></li>
+						<li class="col-xs-2"><a href="#">Contatti</a></li>
           </ul>
         </div>
       </div>
@@ -35,10 +39,10 @@
       </div>
       <div class="col-md-4 col-xs-12 social-footer">
         <h2>Social e Contatti</h2>
-        <ul>
-          <li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-					<li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-					<li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <ul class="col-xs-12">
+          <li class="col-xs-4"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<li class="col-xs-4"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<li class="col-xs-4"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
         </ul>
         <p class="cb"></p>
         <span class="mail-footer">Email: </span><a href="mailto:accoglienza@diaconiavaldese.com" class="mail-link">accoglienza@diaconiavaldese.com</a>
@@ -85,6 +89,34 @@
   </div>
 </div>
 <?php wp_footer(); ?>
-
+<script type="text/javascript">
+jQuery(document).ready(function(){
+  function ismobile(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+       return true;
+    }else{
+        return false;
+        }
+    }
+if (!ismobile()) {
+  jQuery(window).on('scroll', function(e) {
+    var scrollposition = jQuery(document).scrollTop();
+    if(scrollposition > 100){
+      jQuery('.cf-custom').addClass('scrolled'),
+      jQuery('.navbar-nav li a').addClass('navcolored'),
+      jQuery('.navbar-nav li a:hover').addClass('navcolored:hover'),
+      jQuery('.navbar-brand').addClass('logo-colored'),
+      jQuery('.navbar-nav li a.active').addClass('navcolored.active');
+    }else{
+      jQuery('.cf-custom').removeClass('scrolled');
+      jQuery('.navbar-nav li a').removeClass('navcolored'),
+      jQuery('.navbar-nav li a:hover').removeClass('navcolored:hover'),
+      jQuery('.navbar-brand').removeClass('logo-colored'),
+      jQuery('.navbar-nav li a.active').removeClass('navcolored.active');
+    }
+  });
+}
+});
+</script>
 </body>
 </html>
