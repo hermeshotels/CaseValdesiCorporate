@@ -24,6 +24,13 @@ function casavaldesicorporate_setup() {
 	 */
 	load_theme_textdomain( 'casavaldesicorporate', get_template_directory() . '/languages' );
 
+	if( function_exists('acf_add_options_page') ) {
+		acf_add_options_page( array(
+			'page_title' => 'Opzioni'
+		) );
+	}
+
+
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
@@ -64,6 +71,8 @@ function casavaldesicorporate_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+
 }
 endif;
 add_action( 'after_setup_theme', 'casavaldesicorporate_setup' );

@@ -108,7 +108,8 @@ get_header();
               progetti di solidarietà, offrono delle borse per soggiorni scolastici gratuiti a bambini e ragazzi in difficoltà economica,
               sostengono economicamente servizi sociali e assistenziali per le fasce più deboli.
             </p>
-            <a href="#">Scopri di più</a>
+            <a href="#" class="img-allineate-left">Richiedi informazioni</a>
+            <a href="#" class="img-allineate-right">Iscriviti</a>
           </div>
         </div>
       </div>
@@ -118,12 +119,14 @@ get_header();
             <div class="image-buono">
 
             </div>
-            <h2>Turismo Responsabile e Solidarietà</h2>
-            <p>
-              Le Case Valdesi sono strutture senza scopo di lucro che grazie agli ospiti: finanziano
-              progetti di solidarietà, offrono delle borse per soggiorni scolastici gratuiti a bambini e ragazzi in difficoltà economica,
-              sostengono economicamente servizi sociali e assistenziali per le fasce più deboli.
-            </p>
+            <h2 class="text-buono">Regala un buono</h2>
+            <div class="container-fluid cf-custom-third-image-section4">
+              <p>
+                Le Case Valdesi sono strutture senza scopo di lucro che grazie agli ospiti: finanziano
+                progetti di solidarietà, offrono delle borse per soggiorni scolastici gratuiti a bambini e ragazzi in difficoltà economica,
+                sostengono economicamente servizi sociali e assistenziali per le fasce più deboli.
+              </p>
+            </div>
             <a href="#">Scopri di più</a>
           </div>
         </div>

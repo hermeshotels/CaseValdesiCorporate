@@ -52,7 +52,7 @@
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ITA<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
 		            <li><a href="#">ENG</a></li>
-		            <li><a href="#">FRA</a></li>
+		            <li><a href="#">GER</a></li>
 		          </ul>
 		        </li>
 					</ul>
