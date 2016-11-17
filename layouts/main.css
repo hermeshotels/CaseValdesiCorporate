@@ -448,6 +448,9 @@ a:hover {
 
 /** Homepage Mobile **/
 @media screen and (max-width: 768px) {
+  .header {
+    height: 100%; }
+
   .navbar-custom {
     height: 100%;
     background-position: -330px 0; }
@@ -456,19 +459,46 @@ a:hover {
     background: #fff;
     height: 50px !important; }
 
+  .navbar-header-opened {
+    background: #222121 !important;
+    border: none !important; }
+
   .navbar-brand {
     margin-left: 10px; }
     .navbar-brand svg {
       width: 50px;
       height: auto;
-      transition: all .5s ease-in-out; }
+      transition: all .5s ease-in-out;
+      margin-top: -10px; }
       .navbar-brand svg path {
         fill: #3f4b56; }
+
+  .navbar-brand-colored svg {
+    width: 50px;
+    height: auto;
+    transition: all .5s ease-in-out;
+    margin-top: -10px; }
+    .navbar-brand-colored svg path {
+      fill: #fff; }
+
+  .remove {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 10px; }
+    .remove i {
+      color: #fff !important; }
 
   .cf-custom {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 0; }
+    padding-top: 0;
+    height: 100%; }
+
+  .container-fluid > .navbar-collapse {
+    height: 100%;
+    position: relative;
+    transition: all 0.5s ease-in-out; }
 
   .navbar-toggle {
     background: none !important;
@@ -477,6 +507,37 @@ a:hover {
 
   .icon-bar {
     background: #3f4b56; }
+
+  .navbar-collapse {
+    background: #222121;
+    max-height: 100% !important; }
+
+  .navbar-nav {
+    margin: 0 !important;
+    margin-top: 20px !important; }
+
+  .navbar-nav li {
+    margin-left: 0 !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #535353; }
+    .navbar-nav li:last-child {
+      border-bottom: none !important; }
+
+  .navbar-nav li a {
+    text-align: center;
+    font-weight: 300;
+    color: #f4f4f4; }
+
+  .navbar-right li {
+    border-bottom: none;
+    float: left; }
+    .navbar-right li.dropdown {
+      margin-left: 100px !important;
+      width: 20%; }
+
+  .remove {
+    display: none; }
 
   .central-logo {
     margin-top: -50px; }

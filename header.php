@@ -27,9 +27,15 @@
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+						<div class="menu-trigger">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</div>
+						<div class="remove">
+							<i class="fa fa-times fa-2x" aria-hidden="true"></i>
+						</div>
+
 					</button>
 					<a class="navbar-brand" href="#">
 						<?xml version="1.0" encoding="utf-8"?>

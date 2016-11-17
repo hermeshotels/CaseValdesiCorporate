@@ -115,6 +115,22 @@ if (!ismobile()) {
       jQuery('.navbar-nav li a.active').removeClass('navcolored.active');
     }
   });
+}else{
+  jQuery('.menu-trigger').on('click', function(){
+    jQuery('.icon-bar').css('display', 'none');
+    jQuery('body').css('overflow', 'hidden');
+    jQuery('.navbar-header').addClass('navbar-header-opened');
+    jQuery('.navbar-brand').addClass('navbar-brand-colored');
+    jQuery('.remove').css('display', 'block');
+  })
+  jQuery('.remove').on('click', function(){
+    jQuery('.icon-bar').css('display', 'block');
+    jQuery('body').css('overflow', 'auto');
+    jQuery('.navbar-header').removeClass('navbar-header-opened');
+    jQuery('.navbar-brand').removeClass('navbar-brand-colored');
+    jQuery('remove').css('display', 'none');
+    jQuery('.remove i').css('display', 'none');
+  })
 }
 });
 </script>
