@@ -93,7 +93,7 @@
 jQuery(document).ready(function(){
   function ismobile(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       return true;
+         return true;
     }else{
         return false;
         }
@@ -125,14 +125,85 @@ if (!ismobile()) {
   })
   jQuery('.remove').on('click', function(){
     jQuery('.icon-bar').css('display', 'block');
-    jQuery('body').css('overflow', 'auto');
+    jQuery('body').css('overflow', 'none');
     jQuery('.navbar-header').removeClass('navbar-header-opened');
     jQuery('.navbar-brand').removeClass('navbar-brand-colored');
     jQuery('remove').css('display', 'none');
     jQuery('.remove i').css('display', 'none');
   })
+  jQuery(document).ready(function(){
+    jQuery('.remove-foto-hover').hover(function(){
+      jQuery(this).css('display', 'block');
+    }, function(){
+      jQuery(this).css('display', 'none');
+    })
+  })
 }
+  jQuery('.remove-foto-hover').on('click', function(){
+    jQuery(this).closest('.overlay2-hover').fadeIn(0);
+  }, function(){
+    jQuery(this).closest('.overlay2-hover').fadeOut(0);
+  });
 });
+</script>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery('.foto2').hover(function(){
+      jQuery(this).addClass('overlay2-hover-active');
+    }, function(){
+      jQuery(this).removeClass('overlay2-hover-disabilitate');
+    });
+    jQuery('.foto3').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto4').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto5').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto7').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto8').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto9').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto10').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto12').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto13').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+    jQuery('.foto14').hover(function(){
+      jQuery(this).find('.overlay2-hover').fadeIn(0);
+    }, function(){
+      jQuery(this).find('.overlay2-hover').fadeOut(0);
+    });
+  });
 </script>
 </body>
 </html>

@@ -268,8 +268,8 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="#" class="active">Homepage</a></li>
-						<li><a href="#">Foresterie</a></li>
+						<li><a href="homepage">Homepage</a></li>
+						<li><a href="foresterie">Foresterie</a></li>
 						<li><a href="#">Solidarietà</a></li>
 						<li><a href="#">Sostenibilità</a></li>
 						<li><a href="#">Il Blog</a></li>

@@ -50,7 +50,7 @@ a:hover {
   background-position: 0 -200px;
   background-size: cover;
   height: 750px;
-  z-index: 15; }
+  z-index: 99; }
 
 .scrolled {
   height: 80px;
@@ -191,7 +191,7 @@ a:hover {
     top: -120%;
     right: 0;
     width: 700px;
-    height: 700px;
+    height: 800px;
     opacity: .8; }
   .section1 .back-left {
     background: url("../img/grafica_low.png") no-repeat;
@@ -446,6 +446,178 @@ a:hover {
     padding-left: 250px !important;
     padding-right: 250px !important; }
 
+/** Foresterie Desktop **/
+#section1-foresterie {
+  background: #fff; }
+  #section1-foresterie .title-section1-foresterie p {
+    font-size: 24px; }
+
+.strutture-foresterie {
+  margin-top: -10px;
+  position: relative;
+  z-index: 20; }
+  .strutture-foresterie p {
+    font-weight: 300;
+    font-size: 18px; }
+  .strutture-foresterie img {
+    margin-top: -30px; }
+
+#section2-foresterie {
+  background: #e6eaed;
+  padding-bottom: 70px !important; }
+  #section2-foresterie .title-section2-foresterie p {
+    font-size: 24px; }
+  #section2-foresterie img {
+    width: auto;
+    height: 50px;
+    margin-bottom: 80px; }
+
+.contact-info a {
+  font-weight: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #7fa2a8;
+  border: 2px solid #7fa2a8;
+  padding: 20px;
+  border-radius: 3px; }
+.contact-info a:hover {
+  background: #fff; }
+
+#section3-foresterie {
+  background: none !important;
+  padding: 0 !important; }
+
+.foto-no-pad {
+  padding: 0; }
+  .foto-no-pad .foto {
+    height: 600px;
+    background-position: center !important;
+    background-size: cover !important;
+    padding: 0;
+    cursor: pointer; }
+  .foto-no-pad .foto1, .foto-no-pad .foto6, .foto-no-pad .foto11 {
+    background: #000; }
+  .foto-no-pad .foto2 {
+    background: url("../img/foresterie/foto/firenze.jpg"); }
+  .foto-no-pad .foto3 {
+    background: url("../img/foresterie/foto/roma.jpg"); }
+  .foto-no-pad .foto4 {
+    background: url("../img/foresterie/foto/venezia.jpg"); }
+  .foto-no-pad .foto5 {
+    background: url("../img/foresterie/foto/palermo.jpg"); }
+  .foto-no-pad .foto7 {
+    background: url("../img/foresterie/foto/torrepellice.jpg"); }
+  .foto-no-pad .foto8 {
+    background: url("../img/foresterie/foto/reggello.jpg"); }
+  .foto-no-pad .foto9 {
+    background: url("../img/foresterie/foto/agape.jpg"); }
+  .foto-no-pad .foto10 {
+    background: url("../img/foresterie/foto/agape.jpg"); }
+  .foto-no-pad .foto12 {
+    background: url("../img/foresterie/foto/isolaelba.jpg"); }
+  .foto-no-pad .foto13 {
+    background: url("../img/foresterie/foto/vallecrosia.jpg");
+    border-bottom: 5px solid #fff; }
+  .foto-no-pad .foto14 {
+    background: url("../img/foresterie/foto/pietraligure.jpg");
+    border-bottom: 5px solid #fff; }
+  .foto-no-pad .img-categoria, .foto-no-pad .img-categoria1, .foto-no-pad .img-categoria2, .foto-no-pad .img-categoria3 {
+    float: none !important;
+    margin: 0 auto;
+    margin-top: 25%;
+    margin-bottom: 2%; }
+  .foto-no-pad .foto1 .text-categoria p {
+    color: #e36b5e !important; }
+  .foto-no-pad .foto6 .text-categoria p {
+    color: #99bb59 !important; }
+  .foto-no-pad .foto11 .text-categoria p {
+    color: #8db4bb !important; }
+  .foto-no-pad .text-categoria p {
+    font-size: 24px;
+    font-weight: 500; }
+
+.overlay2-hover {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0; }
+
+.overlay2-hover-active {
+  opacity: 1; }
+
+.overlay2-hover-disabilitate {
+  opacity: 0; }
+
+.title-foto-hover {
+  background: #e36b5e;
+  margin-top: -20px; }
+  .title-foto-hover .green-title {
+    background: #99bb59; }
+  .title-foto-hover .blue-title {
+    background: #8db4bb; }
+  .title-foto-hover h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+
+.text-foto-hover {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .text-foto-hover p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px; }
+
+.service-foto-hover img {
+  height: 40px;
+  width: auto; }
+
+.service-foto-hover p {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 20px; }
+
+.button-foto-hover {
+  padding-top: 45%; }
+  .button-foto-hover a {
+    display: block;
+    color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 49.9999%;
+    border: 2px solid #fff;
+    text-align: center;
+    padding-top: 24%;
+    font-size: 20px;
+    margin: 0 auto; }
+    .button-foto-hover a.red-hover:hover {
+      background: #e36b5e;
+      border: 2px solid #e36b5e; }
+    .button-foto-hover a.green-hover:hover {
+      background: #99bb59;
+      border: 2px solid #99bb59; }
+    .button-foto-hover a.blue-hover:hover {
+      background: #8db4bb;
+      border: 2px solid #8db4bb; }
+
+.info-nascoste {
+  display: none; }
+  .info-nascoste a {
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #7fa2a8;
+    border: 2px solid #7fa2a8;
+    padding: 20px;
+    border-radius: 3px; }
+
+.title-nascosto h2 {
+  display: none; }
+
 /** Homepage Mobile **/
 @media screen and (max-width: 768px) {
   .header {
@@ -487,13 +659,13 @@ a:hover {
     top: 0;
     right: 10px; }
     .remove i {
-      color: #fff !important; }
+      color: #fff !important;
+      font-weight: 300 !important; }
 
   .cf-custom {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 0;
-    height: 100%; }
+    padding-top: 0; }
 
   .container-fluid > .navbar-collapse {
     height: 100%;
@@ -540,7 +712,7 @@ a:hover {
     display: none; }
 
   .central-logo {
-    margin-top: -50px; }
+    margin-top: -70px; }
     .central-logo img {
       width: 300px;
       height: auto; }
@@ -607,5 +779,64 @@ a:hover {
     margin-left: 0 auto !important;
     margin: 0 auto !important;
     margin-bottom: 50px !important; } }
+/** Foresterie Mobile **/
+@media screen and (max-width: 768px) {
+  .strutture-foresterie {
+    margin-top: 20px; }
+
+  .title-nascosto {
+    display: block; }
+
+  .info-nascoste {
+    display: block;
+    padding-top: 80%; }
+    .info-nascoste a {
+      font-weight: 300;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #fff;
+      background: #e36b5e;
+      border: 2px solid #e36b5e;
+      padding: 20px;
+      border-radius: 3px; }
+
+  .foto {
+    height: 620px !important; }
+
+  .button-foto-hover a {
+    display: block;
+    color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 49.9999%;
+    border: 2px solid #fff;
+    text-align: center;
+    padding-top: 40%;
+    font-size: 20px;
+    margin: 0 auto; }
+
+  .title-foto-hover h2 {
+    font-weight: 500;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important; }
+
+  .remove-foto-hover {
+    margin-top: 8px !important;
+    text-align: right !important; }
+
+  .remove-foto-hover-visible {
+    display: block; }
+
+  .fa-remove:before, .fa-close:before, .fa-times:before {
+    color: #fff; }
+
+  .text-foto-hover p {
+    padding-top: 40px !important; }
+
+  #section3-foresterie h2 {
+    margin-bottom: 10px !important; } }
 
 /*# sourceMappingURL=main.css.map */
