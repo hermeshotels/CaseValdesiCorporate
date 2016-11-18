@@ -571,12 +571,28 @@ a:hover {
 }
 .foto-no-pad {
   padding: 0;
-  .foto {
+  .foto-wrapper {
     height: 600px;
+    padding: 0;
+    position: relative;
+    .foto {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background-position: center !important;
+      background-size: cover !important;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+    }
+  }
+  .foto {
     background-position: center !important;
     background-size: cover !important;
     padding: 0;
     cursor: pointer;
+    position: relative;
+    height: 600px;
   }
   .foto1, .foto6, .foto11 {
     background: #000;
@@ -610,16 +626,14 @@ a:hover {
   }
   .foto13 {
     background: url('../img/foresterie/foto/vallecrosia.jpg');
-    border-bottom: 5px solid #fff;
   }
   .foto14 {
     background: url('../img/foresterie/foto/pietraligure.jpg');
-    border-bottom: 5px solid #fff;
   }
   .img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
     float: none !important;
     margin: 0 auto;
-    margin-top: 25%;
+    margin-top: 30%;
     margin-bottom: 2%;
   }
   .foto1 .text-categoria p {
@@ -640,17 +654,34 @@ a:hover {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
-  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: all .3s ease-in-out;
+  &.active{
+    display: block;
+  }
+}
+.overlay2-hover h2 {
+  margin-bottom: 0 !important;
+}
+.remove-foto-hover {
+  display: none;
 }
 .overlay2-hover-active {
   opacity:1;
+  transition: all .3s ease-in-out;
 }
-.overlay2-hover-disabilitate {
-  opacity: 0;
+.title-foto-hover-green {
+  background: #99bb59 !important;
+}
+.title-foto-hover-blue{
+  background: #8db4bb !important;
 }
 .title-foto-hover {
   background: #e36b5e;
-  margin-top: -20px;
+  margin-bottom: 20px;
   .green-title {
     background: #99bb59;
   }
@@ -661,7 +692,6 @@ a:hover {
     font-weight: 500;
     font-size: 24px;
     color: #fff;
-    padding-top: 15px;
     padding-bottom: 15px;
   }
 }
@@ -924,9 +954,24 @@ a:hover {
       border-radius: 3px;
     }
   }
-  .foto {
-    height: 620px !important;
-  }
+  .foto-no-pad {
+    padding: 0;
+    .foto-wrapper {
+      height: 650px;
+      padding: 0;
+      position: relative;
+      .foto {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background-position: center !important;
+        background-size: cover !important;
+        padding: 0;
+        cursor: pointer;
+        position: relative;
+      }
+    }
+}
   .button-foto-hover a {
     display: block;
     color: #fff;
@@ -951,7 +996,7 @@ a:hover {
   margin-top: 8px !important;
   text-align: right !important;
 }
-.remove-foto-hover-visible {
+.remove-foto-hover {
   display: block;
 }
 .fa-remove:before, .fa-close:before, .fa-times:before {
@@ -963,4 +1008,10 @@ a:hover {
 #section3-foresterie h2 {
   margin-bottom: 10px !important;
 }
+.foto-no-pad .img-categoria, .foto-no-pad .img-categoria1, .foto-no-pad .img-categoria2, .foto-no-pad .img-categoria3 {
+    float: none !important;
+    margin: 0 auto;
+    margin-top: 55%;
+    margin-bottom: 2%;
+  }
 }

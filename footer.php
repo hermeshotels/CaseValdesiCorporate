@@ -131,77 +131,115 @@ if (!ismobile()) {
     jQuery('remove').css('display', 'none');
     jQuery('.remove i').css('display', 'none');
   })
-  jQuery(document).ready(function(){
-    jQuery('.remove-foto-hover').hover(function(){
-      jQuery(this).css('display', 'block');
-    }, function(){
-      jQuery(this).css('display', 'none');
-    })
-  })
-}
-  jQuery('.remove-foto-hover').on('click', function(){
-    jQuery(this).closest('.overlay2-hover').fadeIn(0);
-  }, function(){
-    jQuery(this).closest('.overlay2-hover').fadeOut(0);
-  });
+  }
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto2').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto3').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto4').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto5').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto7').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto8').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto9').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto10').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto3').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto12').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto13').next('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.remove-foto-hover').on('click', function(){
+      jQuery('.foto13').next('.overlay2-hover').removeClass('active');
+    });
 });
 </script>
 <script type="text/javascript">
   jQuery(document).ready(function(){
     jQuery('.foto2').hover(function(){
-      jQuery(this).addClass('overlay2-hover-active');
-    }, function(){
-      jQuery(this).removeClass('overlay2-hover-disabilitate');
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto3').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto4').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto5').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto7').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto8').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto9').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto10').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto12').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto13').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
     jQuery('.foto14').hover(function(){
-      jQuery(this).find('.overlay2-hover').fadeIn(0);
-    }, function(){
-      jQuery(this).find('.overlay2-hover').fadeOut(0);
+      jQuery(this).next('.overlay2-hover').addClass('active');
+    });
+    jQuery('.overlay2-hover').mouseleave(function(){
+      jQuery('.overlay2-hover').removeClass('active');
     });
   });
 </script>
