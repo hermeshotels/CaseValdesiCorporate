@@ -37,7 +37,7 @@
 						</div>
 
 					</button>
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand" href="homepage">
 						<?xml version="1.0" encoding="utf-8"?>
 						<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -271,9 +271,9 @@
 						<li><a href="homepage">Homepage</a></li>
 						<li><a href="foresterie">Foresterie</a></li>
 						<li><a href="#">Solidarietà</a></li>
-						<li><a href="#">Sostenibilità</a></li>
+						<li><a href="sostenibilita">Sostenibilità</a></li>
 						<li><a href="#">Il Blog</a></li>
-						<li><a href="#">Contatti</a></li>
+						<li><a href="contatti">Contatti</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>

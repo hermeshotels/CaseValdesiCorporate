@@ -53,7 +53,7 @@
           Iscriviti alla <span class="newsletter">Newsletter</span>
         </p>
         <form class="" action="index.html" method="post">
-          <input type="mail" name="email" value="your mail" class="input-mail">
+          <input type="mail" name="email" value="" class="input-mail" placeholder="your mail">
           <input type="submit" name="invia" value="Invia" class="submit-newsletter">
         </form>
       </div>

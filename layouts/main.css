@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 @font-face {
   font-family: 'white_larch_personal_use_onRg';
@@ -394,6 +395,20 @@ a:hover {
     font-size: 14px;
     font-weight: 300; }
 
+.newsletter-footer ::-webkit-input-placeholder {
+  color: #fff !important; }
+
+.newsletter-footer :-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff !important; }
+
+.newsletter-footer ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff !important; }
+
+.newsletter-footer :-ms-input-placeholder {
+  color: #fff !important; }
+
 .newsletter-footer {
   border-top: 1px solid #fff;
   padding-top: 30px; }
@@ -451,6 +466,8 @@ a:hover {
   background: #fff; }
   #section1-foresterie .title-section1-foresterie p {
     font-size: 24px; }
+  #section1-foresterie .back-right {
+    top: -88%; }
 
 .strutture-foresterie {
   margin-top: -10px;
@@ -644,6 +661,120 @@ a:hover {
 
 .title-nascosto h2 {
   display: none; }
+
+/** Sostenibilit├á Desktop **/
+#section1-sostenibilita {
+  background: #fff; }
+  #section1-sostenibilita .title-section1-foresterie p {
+    font-size: 24px; }
+  #section1-sostenibilita .back-right {
+    top: -88%; }
+
+/** Contatti Desktop **/
+#section1-contatti {
+  background: #eeeeee; }
+  #section1-contatti p {
+    margin-top: -15px; }
+  #section1-contatti form {
+    width: 90%; }
+  #section1-contatti input {
+    margin-bottom: 30px; }
+  #section1-contatti input, #section1-contatti textarea {
+    font-size: 18px !important;
+    font-style: italic; }
+  #section1-contatti textarea {
+    margin-top: 70px;
+    min-height: 285px !important; }
+  #section1-contatti .form-contact-input, #section1-contatti .button-form-contact-input {
+    padding: 15px !important;
+    height: 65px;
+    border: none !important;
+    padding-left: 25px !important; }
+  #section1-contatti .button-form-contact-input {
+    background: #fed43c !important;
+    color: #3f4b56 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-color: none !important;
+    font-size: 18px;
+    height: 50px;
+    text-align: center !important;
+    padding-left: 15px !important;
+    margin-top: 10px;
+    font-style: normal; }
+  #section1-contatti .contact-newsletter ::-webkit-input-placeholder {
+    color: #ffd522 !important; }
+  #section1-contatti .contact-newsletter :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffd522 !important; }
+  #section1-contatti .contact-newsletter ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffd522 !important; }
+  #section1-contatti .contact-newsletter :-ms-input-placeholder {
+    color: #ffd522 !important; }
+  #section1-contatti .contact-newsletter input {
+    padding: 10px;
+    background: none !important;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    width: 400px;
+    font-style: normal;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 15%; }
+  #section1-contatti .contact-newsletter input.submit-newsletter {
+    padding: 15px;
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+    background: #fff !important;
+    color: #799ea4;
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 14px;
+    margin-left: 50px;
+    margin-bottom: 200px; }
+
+.cf0 {
+  padding-right: 0 !important;
+  padding-left: 50px; }
+
+.contact-left p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-left: 20px;
+  clear: both; }
+
+.contact-right {
+  padding-right: 0 !important;
+  padding-left: 0;
+  background: url("../img/visual_contatti.jpg");
+  background-position: center;
+  background-size: cover; }
+  .contact-right h2 {
+    color: #fff;
+    font-weight: 300;
+    padding-left: 10%;
+    padding-right: 10%; }
+  .contact-right p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300; }
+  .contact-right form {
+    width: 100% !important;
+    margin: 0 auto; }
+
+.icon-contact {
+  background: url("../img/iconanewsletter.png") no-repeat;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 49.9999%;
+  border: 5px solid #ffd522;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 30px; }
 
 /** Homepage Mobile **/
 @media screen and (max-width: 768px) {
@@ -884,5 +1015,21 @@ a:hover {
     margin: 0 auto;
     margin-top: 55%;
     margin-bottom: 2%; } }
+/** Contatti Mobile **/
+@media screen and (max-width: 768px) {
+  .contact-newsletter {
+    margin-top: 50px; }
+
+  #section1-contatti .contact-newsletter input, #section1-contatti .contact-newsletter input.submit-newsletter {
+    width: 100% !important;
+    margin-top: 20px;
+    margin-left: 0 !important; }
+
+  form {
+    width: 100% !important; }
+
+  .cf0 {
+    padding-right: 15px !important;
+    padding-left: 15px !important; } }
 
 /*# sourceMappingURL=main.css.map */
