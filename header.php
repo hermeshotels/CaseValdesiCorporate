@@ -272,7 +272,7 @@
 						<li><a href="foresterie">Foresterie</a></li>
 						<li><a href="#">Solidarietà</a></li>
 						<li><a href="sostenibilita">Sostenibilità</a></li>
-						<li><a href="#">Il Blog</a></li>
+						<li><a href="blog">Il Blog</a></li>
 						<li><a href="contatti">Contatti</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">

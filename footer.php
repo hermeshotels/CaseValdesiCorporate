@@ -24,12 +24,12 @@
         </div>
         <div class="col-xs-12 menu-footer">
           <ul class="col-xs-12">
-            <li class="col-xs-2"><a href="#">Homepage</a></li>
-            <li class="col-xs-2"><a href="#">Foresterie</a></li>
+            <li class="col-xs-2"><a href="homepage">Homepage</a></li>
+            <li class="col-xs-2"><a href="foresterie">Foresterie</a></li>
             <li class="col-xs-2"><a href="#">Solidarietà</a></li>
-						<li class="col-xs-2"><a href="#">Sostenibilità</a></li>
-						<li class="col-xs-2"><a href="#">Il Blog</a></li>
-						<li class="col-xs-2"><a href="#">Contatti</a></li>
+						<li class="col-xs-2"><a href="sostenibilita">Sostenibilità</a></li>
+						<li class="col-xs-2"><a href="blog">Il Blog</a></li>
+						<li class="col-xs-2"><a href="contatti">Contatti</a></li>
           </ul>
         </div>
       </div>
