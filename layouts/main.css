@@ -665,12 +665,16 @@ a:hover {
   display: none; }
 
 /** Sostenibilit├á Desktop **/
-#section1-sostenibilita {
+#section1-sostenibilita, #section2-sostenibilita {
   background: #fff; }
-  #section1-sostenibilita .title-section1-foresterie p {
+  #section1-sostenibilita .title-section1-foresterie p, #section2-sostenibilita .title-section1-foresterie p {
     font-size: 24px; }
-  #section1-sostenibilita .back-right {
-    top: -88%; }
+  #section1-sostenibilita .back-left, #section2-sostenibilita .back-left {
+    top: 70%; }
+
+.cf0pad {
+  padding-left: 0;
+  padding-right: 0; }
 
 /** Contatti Desktop **/
 #section1-contatti {
@@ -886,6 +890,9 @@ a:hover {
         color: #c4c4c4;
         font-size: 18px;
         margin-bottom: 50px; }
+  .blog-right .social-sidebar {
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8; }
   .blog-right .social-link-sidebar {
     padding: 0;
     text-align: center; }

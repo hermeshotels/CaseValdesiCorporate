@@ -781,16 +781,19 @@ a:hover {
 
 
 /** Sostenibilità Desktop **/
-#section1-sostenibilita {
+#section1-sostenibilita, #section2-sostenibilita {
   background: #fff;
   .title-section1-foresterie p {
     font-size: 24px;
   }
-  .back-right {
-    top: -88%;
+  .back-left {
+    top: 70%;
   }
 }
-
+.cf0pad {
+  padding-left: 0;
+  padding-right: 0;
+}
 /** Contatti Desktop **/
 #section1-contatti {
   background: #eeeeee;
@@ -1047,13 +1050,15 @@ a:hover {
       }
     }
     .social-sidebar {
-      
+      border-top: 1px solid #d8d8d8;
+      border-bottom: 1px solid #d8d8d8;
     }
     .social-link-sidebar {
       padding: 0;
       text-align: center;
     }
   }
+
 
 
 

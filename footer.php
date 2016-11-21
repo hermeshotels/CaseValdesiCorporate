@@ -243,5 +243,22 @@ if (!ismobile()) {
     });
   });
 </script>
+<script type="text/javascript">
+var slider = new MasterSlider();
+
+slider.setup('masterslider' , {
+  width:1200,
+  height:550,
+  space:10,
+  loop:true,
+  view:'fadeWave',
+  layout:'partialview'
+})
+
+slider.control('arrows');
+slider.control('slideinfo',{insertTo:"#partial-view-1" , autohide:false, align:'bottom', size:160});
+
+
+	</script>
 </body>
 </html>
