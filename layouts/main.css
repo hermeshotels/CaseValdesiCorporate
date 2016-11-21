@@ -1003,6 +1003,60 @@ a:hover {
           background: #8a8a8a;
           color: #fff; }
 
+/** Articolo Desktop **/
+#section1-blog-article {
+  background: #fff !important; }
+
+.share-article {
+  margin-top: 20px; }
+
+.share-article a {
+  color: #8a8a8a;
+  margin-left: 20px; }
+  .share-article a:hover {
+    color: #ffd522; }
+
+.share-article a.fb-share-article {
+  padding: 0;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: #8a8a8a;
+  border-radius: 49.9999%;
+  border: 2px solid #8a8a8a;
+  padding-top: 5px;
+  font-size: 9px;
+  margin-left: -10px;
+  display: block; }
+  .share-article a.fb-share-article:hover {
+    background: #ffd522;
+    border: 2px solid #ffd522; }
+
+.content-article {
+  margin-top: 120px; }
+  .content-article h2 {
+    font-weight: 500;
+    text-transform: none;
+    color: #8a8a8a;
+    font-size: 28px; }
+  .content-article h4 {
+    font-size: 22px;
+    font-weight: 300;
+    color: #8a8a8a;
+    margin-bottom: 50px; }
+  .content-article p {
+    color: #8a8a8a;
+    font-weight: 300;
+    font-size: 18px; }
+
+.return-blog {
+  margin-top: 30px; }
+  .return-blog a {
+    text-transform: uppercase;
+    color: #71989e;
+    font-weight: 300;
+    font-size: 24px; }
+
 /**                MOBILE                 **/
 /** Homepage Mobile **/
 @media screen and (max-width: 768px) {
