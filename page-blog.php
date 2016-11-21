@@ -98,10 +98,59 @@ get_header();
             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
    				  <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
    					<a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-            <p class="col-md-offset-2 col-md-3 col-xs-6">
+            <p class="col-md-offset-1 col-md-3 col-xs-6 rss">
               Rss
             </p>
-            <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
+            <a href="#" class="col-md-1 col-xs-2 social-link-sidebar rss"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
+           </div>
+           <div class="tag-sidebar col-xs-12">
+             <h2>Tag</h2>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+             <div class="col-xs-4 tag-link-sidebar">
+               <a href="#">Tag1</a>
+             </div>
+           </div>
+           <div class="newsletter-sidebar col-xs-12">
+             <h2>Iscriviti alla nostra newsletter</h2>
+             <form class="" action="index.html" method="post">
+               <input type="mail" name="email" value="" class="input-mail-sidebar col-md-7 col-xs-12" placeholder="your mail">
+               <input type="submit" name="invia" value="Invia" class="submit-sidebar col-md-offset-1 col-md-3 col-xs-12">
+             </form>
+           </div>
+           <div class="book-sidebar col-xs-12">
+             <h2>Prenota ora</h2>
+             <div class="col-md-4 col-xs-12 tag-link-sidebar">
+               <a href="#">Book</a>
+             </div>
+           </div>
+
+         </div>
+       </div>
+
+       <div class="pagination-link col-xs-12 text-center">
+         <div class="pagination-number">
+           <div class="col-xs-4 pagination-number-container">
+             <a href="#" class="pagination-single-number">1</a>
+           </div>
+           <div class="col-xs-4 pagination-number-container">
+             <a href="#" class="pagination-single-number">2</a>
+           </div>
+           <div class="col-xs-4 pagination-number-container">
+             <a href="#" class="pagination-single-number">3</a>
            </div>
          </div>
        </div>

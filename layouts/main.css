@@ -883,7 +883,7 @@ a:hover {
       font-size: 18px;
       font-weight: 300;
       font-style: italic;
-      margin-bottom: 10px; }
+      margin-bottom: 0; }
       .blog-right .last-comment-fb p.firma {
         font-style: normal;
         font-weight: 300;
@@ -892,10 +892,116 @@ a:hover {
         margin-bottom: 50px; }
   .blog-right .social-sidebar {
     border-top: 1px solid #d8d8d8;
-    border-bottom: 1px solid #d8d8d8; }
+    border-bottom: 1px solid #d8d8d8;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .blog-right .social-sidebar h2 {
+      margin-bottom: 30px !important; }
+    .blog-right .social-sidebar p {
+      padding-top: 7px;
+      font-style: normal;
+      font-weight: 500;
+      color: #71989e; }
   .blog-right .social-link-sidebar {
     padding: 0;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    color: #8a8a8a;
+    border-radius: 49.9999%;
+    border: 2px solid #8a8a8a;
+    padding-top: 10px;
+    font-size: 11px;
+    margin-left: 10px; }
+    .blog-right .social-link-sidebar:hover {
+      background: #fed43c !important;
+      border: 2px solid #fed43c; }
+
+.tag-sidebar {
+  margin-top: 30px; }
+  .tag-sidebar h2 {
+    color: #717171 !important;
+    margin-bottom: 30px !important; }
+  .tag-sidebar a {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+    font-style: normal;
+    border: 2px solid;
+    margin-bottom: 35px; }
+    .tag-sidebar a:hover {
+      background: #fed43c;
+      border: 2px solid #fed43c; }
+
+.newsletter-sidebar {
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  margin-top: 10px;
+  padding-bottom: 40px; }
+  .newsletter-sidebar h2 {
+    padding-top: 10px;
+    margin-bottom: 30px !important; }
+  .newsletter-sidebar .input-mail-sidebar, .newsletter-sidebar .submit-sidebar {
+    background: none !important;
+    border-radius: 5px;
+    border: 2px solid #8a8a8a;
+    text-align: center;
+    font-size: 16px;
+    height: 50px; }
+  .newsletter-sidebar .submit-sidebar {
+    box-shadow: none !important;
+    text-shadow: none !important; }
+    .newsletter-sidebar .submit-sidebar:hover {
+      background: #fed43c !important;
+      border: 2px solid #fed43c; }
+
+.book-sidebar {
+  margin-top: 15px; }
+  .book-sidebar h2 {
+    margin-bottom: 30px !important; }
+  .book-sidebar a {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 500;
+    font-style: normal;
+    border: 2px solid;
+    margin-bottom: 35px; }
+    .book-sidebar a:hover {
+      background: #fed43c;
+      border: 2px solid #fed43c; }
+
+.pagination-link {
+  margin-top: 50px;
+  padding-bottom: 50px; }
+  .pagination-link .pagination-number {
+    width: 300px;
+    margin: 0 auto;
     text-align: center; }
+    .pagination-link .pagination-number .pagination-number-container {
+      text-align: center;
+      margin: 0 auto; }
+      .pagination-link .pagination-number .pagination-number-container .pagination-single-number {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        border-radius: 49.9999%;
+        border: 2px solid #8a8a8a;
+        color: #8a8a8a;
+        display: block;
+        text-align: center;
+        padding-top: 6px;
+        margin: 0 auto; }
+        .pagination-link .pagination-number .pagination-number-container .pagination-single-number:hover {
+          background: #8a8a8a;
+          color: #fff; }
 
 /**                MOBILE                 **/
 /** Homepage Mobile **/
@@ -1160,6 +1266,23 @@ a:hover {
     padding-bottom: 100px; }
 
   .border-h2 {
-    width: 100% !important; } }
+    width: 100% !important; }
+
+  .blog-right {
+    padding-left: 15px; }
+    .blog-right .last-comment-fb img {
+      width: 50px;
+      height: 50px; }
+    .blog-right .social-sidebar .rss {
+      margin-top: 20px; }
+    .blog-right .social-link-sidebar {
+      width: 40px;
+      height: 40px;
+      padding-top: 8px; }
+    .blog-right .newsletter-sidebar .submit-sidebar {
+      margin-top: 30px; }
+
+  .blog-right .about-blog h2, .blog-right .last-comment-fb h2, .blog-right .tag-sidebar h2, .blog-right .newsletter-sidebar h2, .blog-right .book-sidebar h2 {
+    text-align: center; } }
 
 /*# sourceMappingURL=main.css.map */
