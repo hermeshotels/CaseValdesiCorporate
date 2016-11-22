@@ -9,10 +9,8 @@ get_header();
    <div class="valign">
      <div class="container-fluid cf-custom-section1">
        <div class="text-section1 text-center">
-         <h2>Contattaci</h2>
-         <p>
-           Per informazioni sulle prenotazioni e foresterie completa il form
-         </p>
+         <h2><?php the_field('titolo_prima_sezione')?></h2>
+         <p><?php the_field('testo_prima_sezione')?></p>
         </div>
       </div>
      <div class="container-fluid cf0">
@@ -26,6 +24,9 @@ get_header();
            </div>
            <div class="form-group">
              <input type="email" name="email" placeholder="Email" class="form-control form-contact-input">
+           </div>
+           <div class="form-group">
+             <input type="text" name="oggetto" placeholder="Oggetto" class="form-control form-contact-input">
            </div>
            <div class="form-group">
              <textarea name="name" rows="8" cols="40" value="" class="form-control form-contact-input" placeholder="Messaggio"></textarea>
@@ -43,9 +44,9 @@ get_header();
          <div class="icon-contact">
 
          </div>
-         <h2 class="col-xs-12">Iscriviti alla newsletter!</h2>
+         <h2 class="col-xs-12"><?php the_field('titolo_newsletter')?></h2>
          <p class="col-xs-12">
-           Per essere sempre informato sulle ultime novità iscriviti alla newsletter!
+           <?php the_field('testo_newsletter')?>
          </p>
          <div class="contact-newsletter col-xs-12">
            <form class="" action="index.html" method="post">

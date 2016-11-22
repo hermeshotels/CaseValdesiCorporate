@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div class="header">
-	<nav class="navbar navbar-custom">
+	<nav class="navbar navbar-custom" style="background-image: url('<?php the_field('immagine_header')?>'); background-repeat: no-repeat;">
 		<div class="valign-wrapper overlay">
 			<div class="container-fluid cf-custom">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -290,9 +290,9 @@
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 			<div class="central-logo text-center">
-				<img src="<?php echo get_template_directory_uri() . '/img/homepage/logo-casevaldesi.png'?>" alt=""/>
-				<h1>Vocazione all'accoglienza</h1>
-				<a href="#" class="scrolldown-page"></a>
+				<img src="<?php the_field('logo_centrale_casavaldesi')?>" alt=""/>
+				<h1><?php the_field('testo_centrale_header')?></h1>
+				<a href="#" class="scrolldown-page" style="background-image: url('<?php the_field('immagine_scroll');?>');"></a>
 			</div>
 		</div>
 	</nav>

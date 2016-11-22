@@ -39,8 +39,30 @@ function casavaldesicorporate_setup() {
 				'excerpt',
 				'thumbnail'
 				),
+				'taxonomies' => array( 'category' )
 	    )
 	  );
+	}
+
+	add_action( 'init', 'create_post_foresterie' );
+	function create_post_foresterie() {
+		register_post_type( 'foresterie',
+			array(
+				'labels' => array(
+					'name' => __( 'Foresterie' ),
+					'singular_name' => __( 'Foresterie' )
+				),
+				'public' => true,
+				'has_archive' => true,
+				'supports' => array(
+				'title',
+				'editor',
+				'excerpt',
+				'thumbnail'
+				),
+				'taxonomies' => array( 'category' )
+			)
+		);
 	}
 
 	// Add default posts and comments RSS feed links to head.

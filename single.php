@@ -64,13 +64,13 @@ get_header(); ?>
               <p class="firma">Mario Rossi</p>
             </div>
             <div class="social-sidebar col-xs-12">
-              <p class="col-md-3 col-xs-6">
+              <p class="col-md-3 col-xs-5">
                 Follow Us
               </p>
-             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+              <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
     				  <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
     					<a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-             <p class="col-md-offset-1 col-md-3 col-xs-6 rss">
+             <p class="col-md-offset-1 col-md-3 col-xs-5 rss">
                Rss
              </p>
              <a href="#" class="col-md-1 col-xs-2 social-link-sidebar rss"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
@@ -115,6 +115,51 @@ get_header(); ?>
     </div>
   </div>
 </div>
+<div class="section1" id="section2-blog-article">
+ <div class="valign-wrapper">
+   <div class="valign">
+     <div class="cf0pad">
+       <div class="recent-article col-xs-12">
+         <div class="arrow-previous-article col-xs-1 text-center">
+           <a href=""><i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i></a>
+         </div>
+         <div class="previous-article col-md-3 col-xs-11">
+           <h4>Previous Post</h4>
+           <h2>"Titolo articolo"</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <div class="next-article col-md-3 col-md-offset-4 col-xs-11">
+           <h4>Next Post</h4>
+           <h2>"Titolo articolo"</h2>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+         </div>
+         <div class="arrow-previous-article arrow-next-article col-xs-1 text-center">
+           <a href=""><i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i></a>
+         </div>
+         <div class="border-recent-article col-md-5 col-xs-4">
+
+         </div>
+         <div class="recent-article-or col-md-2 col-xs-4 text-center">
+           <h2>Oppure</h2>
+         </div>
+         <div class="border-recent-article col-md-5 col-xs-4">
+
+         </div>
+         <div class="link-return-blog col-xs-12 text-center">
+           <a href="#">Torna al blog di Case Valdesi</a>
+         </div>
+         <div class="editor-comment col-md-offset-3 col-md-6 col-xs-12">
+           <textarea name="name" rows="8" cols="80" placeholder="Scrivi un commento..."></textarea>
+           <div class="form-group">
+             <input type="submit" name="invia" value="Invia" class="col-md-2 col-xs-12 btn button-form-contact-input">
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+
 <?php
 get_footer();
 ?>

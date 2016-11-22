@@ -92,13 +92,13 @@ get_header();
              <p class="firma">Mario Rossi</p>
            </div>
            <div class="social-sidebar col-xs-12">
-             <p class="col-md-3 col-xs-6">
+             <p class="col-md-3 col-xs-5">
                Follow Us
              </p>
-            <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-   				  <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-   					<a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
-            <p class="col-md-offset-1 col-md-3 col-xs-6 rss">
+             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+             <p class="col-md-offset-1 col-md-3 col-xs-5 rss">
               Rss
             </p>
             <a href="#" class="col-md-1 col-xs-2 social-link-sidebar rss"><i class="fa fa-rss fa-2x" aria-hidden="true"></i></a>
