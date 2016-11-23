@@ -19,7 +19,6 @@ get_header();
           <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'single_post_thumbnail' ); ?>
           <div class="article-wrapper">
             <div class="article-image" style="background-image: url('<?php echo $image[0]; ?>')">
-
             </div>
             <div class="article-title">
               <h2><?php the_title(); ?></h2>
@@ -53,8 +52,6 @@ get_header();
               </div>
             </div>
           </div>
-
-
         <?php endwhile; ?>
     </div>
        <div class="col-md-5 col-xs-12 blog-right">
@@ -137,10 +134,8 @@ get_header();
                <a href="#">Book</a>
              </div>
            </div>
-
          </div>
        </div>
-
        <div class="pagination-link col-xs-12 text-center">
          <div class="pagination-number">
            <div class="col-xs-4 pagination-number-container">

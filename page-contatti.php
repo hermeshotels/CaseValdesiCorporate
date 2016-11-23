@@ -42,7 +42,6 @@ get_header();
        <div class="contact-right col-md-6 col-xs-12 text-center">
          <div class="overlay2 col-md-6 col-xs-12">
          <div class="icon-contact">
-
          </div>
          <h2 class="col-xs-12"><?php the_field('titolo_newsletter')?></h2>
          <p class="col-xs-12">

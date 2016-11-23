@@ -267,14 +267,7 @@
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li><a href="homepage">Homepage</a></li>
-						<li><a href="foresterie">Foresterie</a></li>
-						<li><a href="#">Solidarietà</a></li>
-						<li><a href="sostenibilita">Sostenibilità</a></li>
-						<li><a href="blog">Il Blog</a></li>
-						<li><a href="contatti">Contatti</a></li>
-					</ul>
+					<?php wp_nav_menu(array('menu_class' => 'nav navbar-nav'));?>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
 						<li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
@@ -292,7 +285,7 @@
 			<div class="central-logo text-center">
 				<img src="<?php the_field('logo_centrale_casavaldesi')?>" alt=""/>
 				<h1><?php the_field('testo_centrale_header')?></h1>
-				<a href="#" class="scrolldown-page" style="background-image: url('<?php the_field('immagine_scroll');?>');"></a>
+				<a href="#section1" class="scrolldown-page" style="background-image: url('<?php the_field('immagine_scroll');?>');"></a>
 			</div>
 		</div>
 	</nav>

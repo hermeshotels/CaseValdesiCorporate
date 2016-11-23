@@ -75,13 +75,10 @@ get_header();
      </div>
    </div>
  </div>
-
-
  <div class="section1" id="section3-foresterie">
    <div class="valign-wrapper">
      <div class="valign">
        <div class="col-xs-12 foto-no-pad text-center">
-
          <?php
          $categorie = get_field('categorie');
          if($categorie):
@@ -124,9 +121,7 @@ get_header();
                   </p>
                 </div>
                 <div class="service-foto-hover">
-
                   <?php
-
                   if(have_rows('icone')):
                     while (have_rows('icone')): the_row();
                    ?>
@@ -149,7 +144,7 @@ get_header();
                       <a href="<?php the_field('map_link')?>"><?php the_field('testo_map_link')?></a>
                     </div>
                     <?php endif; ?>
-                    <?php if(get_field('map_link')): ?>
+                    <?php if(get_field('explore_link')): ?>
                     <div class="col-xs-4">
                       <a href="<?php the_field('explore_link')?>"><?php the_field('testo_expore_link')?></a>
                     </div>
@@ -161,13 +156,10 @@ get_header();
                 <a href="#">Scopri di più</a>
               </div>
             </div>
-
           <?php endwhile; ?>
           <?php wp_reset_query(); ?>
           <?php endforeach; ?>
           <?php endif; ?>
-
-
        </div>
      </div>
    </div>

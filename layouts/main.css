@@ -70,7 +70,7 @@ a:hover {
   color: #8db4bb !important;
   font-weight: 500 !important; }
 
-.navcolored.active {
+.current-menu-item .navcolored {
   font-weight: 700 !important;
   color: #3f4b56 !important; }
 
@@ -96,11 +96,12 @@ a:hover {
   margin-left: 50px; }
   .navbar-nav li {
     margin-left: 50px; }
+    .navbar-nav li.current-menu-item a {
+      color: #fed43c;
+      font-weight: bold; }
     .navbar-nav li a {
       color: #fff;
       font-weight: 300; }
-      .navbar-nav li a.active {
-        font-weight: bold; }
       .navbar-nav li a.active, .navbar-nav li a:hover, .navbar-nav li a:focus {
         color: #fed43c;
         background: none !important; }
@@ -160,7 +161,17 @@ a:hover {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-top: 150px; }
+    margin-top: 150px;
+    transition: .2s;
+    color: #fff;
+    border-radius: 49.9999%; }
+    .central-logo .scrolldown-page:hover {
+      transition: .2s;
+      width: 35px;
+      height: 35px;
+      background-size: 35px auto;
+      border-radius: 49.9999%;
+      border: 2px solid #fff; }
 
 .section1 {
   background: #e6eaed;
@@ -216,25 +227,51 @@ a:hover {
 .img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
   background-repeat: no-repeat;
   background-position: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 49.9999%;
+  width: 70px;
+  height: 70px;
   float: left;
-  margin-right: 40px; }
+  border-radius: 49.9999%;
+  margin-right: 40px;
+  margin-left: 30px;
+  background-size: cover; }
 
 .text-categoria p {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 22px;
   font-weight: 300;
   text-transform: uppercase; }
 
 .section3 {
-  background: url("../img/map.png") no-repeat;
-  background-size: cover;
-  background-position: 0 -200px;
   position: relative;
   z-index: 9;
   height: 500px; }
+  .section3 #map {
+    height: 100%;
+    width: 100%; }
+
+.gm-style img {
+  max-width: 270px !important;
+  margin-left: 20px; }
+
+.iw-foto {
+  width: 250px;
+  height: 180px;
+  overflow: hidden; }
+
+.iw-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px; }
+
+.iw-link {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  transition: .5s; }
+  .iw-link:hover {
+    margin-left: 10px;
+    transition: .5s; }
 
 .first-image-section4 {
   background-position: center;
@@ -313,28 +350,30 @@ a:hover {
   .footer .loghi-footer img {
     width: 105px;
     height: auto;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
     float: right;
     margin-right: 50px;
-    margin-top: 80px; }
+    margin-top: 60px; }
     .footer .loghi-footer img.second-logo-footer {
       width: 204px;
       height: auto;
       float: left; }
 
-.menu-footer ul {
+.menu-footer .menu-list-footer {
   list-style: none;
   margin-left: 0;
-  margin-bottom: 100px; }
-  .menu-footer ul li {
-    float: left; }
-    .menu-footer ul li a {
+  margin-bottom: 60px; }
+  .menu-footer .menu-list-footer li {
+    float: left;
+    width: 16.66666667%; }
+    .menu-footer .menu-list-footer li a {
       text-transform: uppercase;
       font-weight: 300;
       color: #fff;
       font-size: 18px;
-      font-weight: 500; }
-      .menu-footer ul li a:hover {
+      font-weight: 500;
+      text-align: center; }
+      .menu-footer .menu-list-footer li a:hover {
         color: #fed43c;
         font-weight: 500; }
 
@@ -347,7 +386,7 @@ a:hover {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .membri-footer img {
     margin-left: -300px; }
 
@@ -362,7 +401,7 @@ a:hover {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .social-footer ul {
     list-style: none;
     margin-left: 0; }
@@ -407,7 +446,7 @@ a:hover {
     font-size: 14px;
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   .newsletter-footer p {
     color: #fff;
     font-size: 14px;
@@ -453,6 +492,49 @@ a:hover {
     padding-left: 250px !important;
     padding-right: 250px !important; }
 
+.foresteria-box-map {
+  width: 300px;
+  height: 180px;
+  background: url("../img/visual_contatti.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 300;
+  display: none; }
+  .foresteria-box-map .overlay2 {
+    padding-top: 0; }
+  .foresteria-box-map h2 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #e36b5e;
+    margin-top: 0; }
+  .foresteria-box-map a {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 38%;
+    transition: .5s; }
+    .foresteria-box-map a:hover {
+      margin-left: 10px;
+      transition: .5s; }
+  .foresteria-box-map .close-foresteria-box-map {
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 49.9999%; }
+    .foresteria-box-map .close-foresteria-box-map i {
+      color: #e36b5e;
+      padding-left: 10px;
+      padding-top: 8px; }
+
 /** Foresterie Desktop **/
 #section1-foresterie {
   background: #fff; }
@@ -490,7 +572,8 @@ a:hover {
   padding: 20px;
   border-radius: 3px; }
 .contact-info a:hover {
-  background: #fff; }
+  background: #7fa2a8;
+  color: #fff; }
 
 #section3-foresterie {
   background: none !important;
@@ -1267,7 +1350,29 @@ a:hover {
     float: none !important;
     margin-left: 0 auto !important;
     margin: 0 auto !important;
-    margin-bottom: 50px !important; } }
+    margin-bottom: 50px !important; }
+
+  .section1 h2 {
+    font-size: 24px; }
+  .section1 p {
+    font-size: 16px; }
+
+  .img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 49.9999%;
+    background-size: cover;
+    margin-right: 30px;
+    margin-left: 0; }
+
+  .text-categoria p {
+    margin-top: 15px;
+    font-size: 18px; }
+
+  .first-image-section4 h2 {
+    font-size: 20px; }
+  .first-image-section4 p, .first-image-section4 a {
+    font-size: 16px; } }
 /** Foresterie Mobile **/
 @media screen and (max-width: 768px) {
   .strutture-foresterie {
@@ -1340,6 +1445,15 @@ a:hover {
 
   .text-foto-hover p {
     padding-top: 40px !important; }
+
+  #section1-foresterie .title-section1-foresterie p, #section2-foresterie .title-section2-foresterie p {
+    font-size: 20px; }
+
+  #section2-foresterie img {
+    margin-bottom: 0; }
+
+  .contact-info a {
+    font-size: 16px; }
 
   #section3-foresterie h2 {
     margin-bottom: 10px !important; }

@@ -45,7 +45,6 @@ get_header();
          </div>
        </div>
        <div class="back-left">
-
        </div>
      </div>
    </div>

@@ -23,14 +23,7 @@
           </div>
         </div>
         <div class="col-xs-12 menu-footer">
-          <ul class="col-xs-12">
-            <li class="col-xs-2"><a href="homepage">Homepage</a></li>
-            <li class="col-xs-2"><a href="foresterie">Foresterie</a></li>
-            <li class="col-xs-2"><a href="#">Solidarietà</a></li>
-						<li class="col-xs-2"><a href="sostenibilita">Sostenibilità</a></li>
-						<li class="col-xs-2"><a href="blog">Il Blog</a></li>
-						<li class="col-xs-2"><a href="contatti">Contatti</a></li>
-          </ul>
+          <?php wp_nav_menu(array('menu_class' => 'menu-list-footer col-xs-12'));?>
         </div>
       </div>
       <div class="col-md-4 col-xs-12 membri-footer">
