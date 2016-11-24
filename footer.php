@@ -57,22 +57,27 @@
   <div class="valign-wrapper">
     <div class="valign">
       <div class="container-fluid cf-footer">
-        <div class="col-md-3 col-xs-12 category-bottom-footer">
+        <div class="col-md-offset-1 col-md-2 col-xs-12 category-bottom-footer">
           <p>
             © 2016 Commissione Sinodale per la Diaconia
           </p>
         </div>
-        <div class="col-md-3 col-xs-12 category-bottom-footer">
+        <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p>
             P.IVA/C.Fiscale 07639750012
           </p>
         </div>
-        <div class="col-md-3 col-xs-12 category-bottom-footer">
+        <div class="col-md-2 col-xs-12 category-bottom-footer">
+          <p>
+            <a href="http://www.verne-sas.it/">Web & Com ®</a>
+          </p>
+        </div>
+        <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p>
             Powered by WEBJ
           </p>
         </div>
-        <div class="col-md-3 col-xs-12 category-bottom-footer">
+        <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p class="no-border">
             Privacy & Cookie
           </p>
@@ -83,48 +88,53 @@
 </div>
 <?php wp_footer(); ?>
 <script type="text/javascript">
-jQuery(document).ready(function(){
-  function ismobile(){
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-         return true;
-    }else{
-        return false;
-        }
-    }
-if (!ismobile()) {
-  jQuery(window).on('scroll', function(e) {
-    var scrollposition = jQuery(document).scrollTop();
-    if(scrollposition > 100){
-      jQuery('.cf-custom').addClass('scrolled'),
-      jQuery('.navbar-nav li a').addClass('navcolored'),
-      jQuery('.navbar-nav li a:hover').addClass('navcolored:hover'),
-      jQuery('.navbar-brand').addClass('logo-colored'),
-      jQuery('.navbar-nav li a.active').addClass('navcolored.active');
-    }else{
-      jQuery('.cf-custom').removeClass('scrolled');
-      jQuery('.navbar-nav li a').removeClass('navcolored'),
-      jQuery('.navbar-nav li a:hover').removeClass('navcolored:hover'),
-      jQuery('.navbar-brand').removeClass('logo-colored'),
-      jQuery('.navbar-nav li a.active').removeClass('navcolored.active');
+function ismobile(){
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   return true;
+  }else{
+    return false;
+  }
+}
+
+var $navbar = jQuery('.navbar-wrapper');
+var $menuicon = jQuery('.navbar-wrapper .mob-menu-trigger');
+
+if(!ismobile()){
+  jQuery(window).on('scroll', function(){
+    var scrollTrigger = 100;
+    var scrollPos = jQuery(document).scrollTop();
+
+    if (scrollPos > scrollTrigger) {
+      $navbar.addClass('scrolled');
+    } else {
+      $navbar.removeClass('scrolled');
     }
   });
 }else{
-  jQuery('.menu-trigger').on('click', function(){
-    jQuery('.icon-bar').css('display', 'none');
-    jQuery('body').css('overflow', 'hidden');
-    jQuery('.navbar-header').addClass('navbar-header-opened');
-    jQuery('.navbar-brand').addClass('navbar-brand-colored');
-    jQuery('.remove').css('display', 'block');
-  })
-  jQuery('.remove').on('click', function(){
-    jQuery('.icon-bar').css('display', 'block');
-    jQuery('body').css('overflow', 'none');
-    jQuery('.navbar-header').removeClass('navbar-header-opened');
-    jQuery('.navbar-brand').removeClass('navbar-brand-colored');
-    jQuery('remove').css('display', 'none');
-    jQuery('.remove i').css('display', 'none');
-  })
+  $navbar.addClass('scrolled');
+}
+
+jQuery('.moblang-trigger').on('click', function(){
+    jQuery('.mob-lang').css('display', 'block');
+});
+
+jQuery('.mob-lang .close').on('click', function(){
+  jQuery('.mob-lang').css('display', 'none');
+});
+
+jQuery('.mob-menu-trigger').on('click', function(){
+  if ($navbar.hasClass('mob-active')) {
+    $navbar.removeClass('mob-active');
+    jQuery('html, body').css('overflow', 'scroll');
+    $menuicon.html('<i class="fa fa-bars" aria-hidden="true"></i>');
+  }else{
+    $navbar.addClass('mob-active');
+    jQuery('html, body').css('overflow', 'hidden');
+    $menuicon.html('<i class="fa fa-times" aria-hidden="true"></i>');
   }
+});
+
+
     jQuery('.remove-foto-hover').on('click', function(){
       jQuery('.foto2').next('.overlay2-hover').removeClass('active');
     });
@@ -161,7 +171,6 @@ if (!ismobile()) {
     jQuery('.remove-foto-hover').on('click', function(){
       jQuery('.foto13').next('.overlay2-hover').removeClass('active');
     });
-});
 </script>
 <script type="text/javascript">
   jQuery(document).ready(function(){

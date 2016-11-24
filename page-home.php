@@ -102,6 +102,7 @@ get_header();
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 41.909986, lng: 12.3959157},
           zoom: 5,
+          scrollwheel: false,
           styles: [
   {
     "elementType": "geometry",

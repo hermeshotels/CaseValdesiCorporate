@@ -148,12 +148,6 @@ get_header(); ?>
          <div class="link-return-blog col-xs-12 text-center">
            <a href="#">Torna al blog di Case Valdesi</a>
          </div>
-         <div class="editor-comment col-md-offset-3 col-md-6 col-xs-12">
-           <textarea name="name" rows="8" cols="80" placeholder="Scrivi un commento..."></textarea>
-           <div class="form-group">
-             <input type="submit" name="invia" value="Invia" class="col-md-2 col-xs-12 btn button-form-contact-input">
-           </div>
-         </div>
        </div>
      </div>
    </div>
