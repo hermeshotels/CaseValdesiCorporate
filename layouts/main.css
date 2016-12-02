@@ -12,6 +12,12 @@ body, html {
   padding: 0;
   margin: 0; }
 
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 a:hover {
   text-decoration: none; }
 
@@ -25,6 +31,10 @@ a:hover {
     display: table-cell;
     vertical-align: middle;
     width: 100%; }
+
+.header {
+  background-position: center !important;
+  background-size: cover !important; }
 
 .navbar-wrapper {
   position: fixed;
@@ -110,11 +120,12 @@ a:hover {
       .navbar-wrapper .social ul li {
         display: inline-block; }
         .navbar-wrapper .social ul li i {
-          width: 60px;
+          width: 40px;
           height: auto;
           vertical-align: middle;
           text-align: center;
-          color: #fff; }
+          color: #fff;
+          font-size: 22px; }
           .navbar-wrapper .social ul li i:hover {
             color: #fed43c; }
   .navbar-wrapper .lang {
@@ -314,8 +325,8 @@ a:hover {
   top: 0;
   left: 0;
   padding: 0;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   transition: all 0.5s ease-in-out; }
 
 .navcolored {
@@ -397,11 +408,20 @@ a:hover {
   left: 40px !important; }
 
 .central-logo {
-  padding-top: 250px; }
+  margin-top: 15%;
+  height: 430px;
+  position: relative; }
   .central-logo img {
     margin-bottom: 0;
     width: 320px;
-    height: auto; }
+    height: auto;
+    display: block;
+    left: 50%;
+    position: absolute;
+    bottom: 50%;
+    margin-left: -160px; }
+    .central-logo img.font-image {
+      bottom: 35%; }
   .central-logo h1 {
     color: #fff;
     font-family: 'white_larch_personal_use_onRg';
@@ -414,7 +434,8 @@ a:hover {
     display: inline-block;
     width: 30px;
     height: 30px;
-    margin-top: 150px;
+    position: absolute;
+    bottom: 2%;
     transition: .2s;
     color: #fff;
     border-radius: 49.9999%; }
@@ -432,10 +453,16 @@ a:hover {
   padding-bottom: 50px;
   position: relative;
   overflow: hidden; }
-  .section1 h2 {
+  .section1 h1 {
     text-transform: uppercase;
     color: #3f4b56;
     font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 300; }
+  .section1 h2 {
+    text-transform: uppercase;
+    color: #3f4b56;
+    font-size: 28px;
     margin-bottom: 30px;
     font-weight: 300; }
   .section1 p {
@@ -459,11 +486,12 @@ a:hover {
     opacity: .8; }
   .section1 .back-left {
     background: url("../img/grafica_low.png") no-repeat;
+    background-size: 500px 500px;
     position: absolute;
-    top: 40%;
+    top: 65%;
     left: 0;
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     opacity: .8; }
 
 .button-section1 a {
@@ -473,15 +501,15 @@ a:hover {
   color: #7fa2a8; }
 
 .section2 {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: #fff; }
 
 .img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
   background-repeat: no-repeat;
   background-position: center;
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   float: left;
   border-radius: 49.9999%;
   margin-right: 40px;
@@ -489,15 +517,15 @@ a:hover {
   background-size: cover; }
 
 .text-categoria p {
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 15px;
+  font-size: 14px;
   font-weight: 300;
   text-transform: uppercase; }
 
 .section3 {
   position: relative;
   z-index: 9;
-  height: 500px; }
+  height: 600px; }
   .section3 #map {
     height: 100%;
     width: 100%; }
@@ -534,7 +562,8 @@ a:hover {
   background-size: cover;
   border-right: 5px solid #fff;
   padding: 0 !important;
-  border-top: 5px solid #fff; }
+  border-top: 5px solid #fff;
+  height: 570px; }
   .first-image-section4 h2 {
     padding-top: 20px;
     text-transform: uppercase;
@@ -557,10 +586,10 @@ a:hover {
     border-radius: 5px;
     border: 2px solid #e4c76b;
     padding: 10px 5px;
-    width: 250px;
+    width: 200px;
     margin: 0 auto;
     margin-bottom: 80px;
-    font-size: 20px; }
+    font-size: 16px; }
     .first-image-section4 a:hover {
       background: #fff;
       border: 2px solid #fff;
@@ -570,22 +599,27 @@ a:hover {
   border-right: none !important;
   border-top: 5px solid #fff; }
 
+.third-image-section4 {
+  height: 650px; }
+
 .img-allineate-left {
   float: left;
-  margin-left: 100px !important; }
+  margin-left: 10% !important; }
 
 .img-allineate-right {
   display: inline-block !important;
-  margin-left: 100px !important; }
+  margin-right: 10% !important;
+  float: right; }
 
 .third-image-section4 {
   border-top: 5px solid #fff;
   border-bottom: 5px solid #fff; }
   .third-image-section4 .image-buono {
+    background-size: 100px 100px;
     background-repeat: no-repeat;
     background-position: center;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 49.9999%;
     border: 5px solid;
     margin: 0 auto;
@@ -791,6 +825,199 @@ a:hover {
       padding-left: 10px;
       padding-top: 8px; }
 
+.sign-popup, .information-popup, .gift-popup, .foresterie-sign-popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 100;
+  top: 0; }
+
+.sign-popup-active, .information-popup-active, .gift-popup-active, .foresterie-sign-popup-active {
+  display: block; }
+
+.close-form img {
+  width: 35px;
+  height: 35px;
+  border-radius: 49.9999%;
+  padding: 10px;
+  position: absolute;
+  top: -3%;
+  right: -2%;
+  background: #fff;
+  cursor: pointer; }
+
+.textarea-container {
+  display: none; }
+
+.textarea-container-active {
+  display: block; }
+
+.foresterie-close-form {
+  position: absolute;
+  width: 50%;
+  max-height: 20%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  margin: auto; }
+
+.foresterie-close-form img {
+  top: -160%;
+  right: -2%; }
+
+.foresterie-form-signing-active {
+  overflow: auto; }
+
+.form-signing, .form-information, .form-gift, .foresterie-form-signing {
+  position: absolute;
+  width: 50%;
+  max-height: 80%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  margin: auto;
+  background: #8db4bb;
+  border-radius: 10px;
+  padding: 20px;
+  color: #3a6167;
+  padding-top: 50px;
+  padding-bottom: 0; }
+  .form-signing .form-control, .form-information .form-control, .form-gift .form-control, .foresterie-form-signing .form-control {
+    height: 50px;
+    padding-left: 20px;
+    color: #3a6167;
+    margin-bottom: 5%; }
+  .form-signing legend, .form-information legend, .form-gift legend, .foresterie-form-signing legend {
+    border-bottom: none !important;
+    font-size: 16px !important;
+    color: #f1f1f1;
+    font-weight: 300;
+    margin-bottom: 0; }
+  .form-signing .label-radio, .form-information .label-radio, .form-gift .label-radio, .foresterie-form-signing .label-radio {
+    margin-top: -10px; }
+  .form-signing .radio-button, .form-information .radio-button, .form-gift .radio-button, .foresterie-form-signing .radio-button {
+    width: 30px; }
+
+.container-list-radio {
+  display: block;
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0; }
+
+.container-list-radio ul {
+  list-style: none !important;
+  height: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  margin-top: 5% !important;
+  padding: 0 !important; }
+
+.form0padleft {
+  padding-left: 0; }
+
+.form0padright {
+  padding-right: 0; }
+
+.calendar-form {
+  margin-bottom: 0 !important; }
+
+.container-list-radio ul li {
+  color: #fff !important;
+  display: block !important;
+  position: relative !important;
+  float: left !important;
+  width: 50% !important;
+  height: 100px !important; }
+
+.container-list-radio ul li input[type=radio] {
+  position: absolute !important;
+  visibility: hidden !important; }
+
+.container-list-radio ul li label {
+  display: block !important;
+  position: relative !important;
+  font-weight: 300 !important;
+  font-size: 1em !important;
+  padding: 10px 0 0 0 !important;
+  height: 30px !important;
+  z-index: 9 !important;
+  cursor: pointer !important;
+  -webkit-transition: all 0.25s linear !important; }
+  .container-list-radio ul li label.label-mleft {
+    margin-left: -10px; }
+
+.container-list-radio ul li:hover label {
+  color: #FFFFFF !important; }
+
+.container-list-radio ul li .check {
+  display: block !important;
+  position: absolute !important;
+  border: 5px solid #fff !important;
+  border-radius: 100% !important;
+  height: 30px !important;
+  width: 30px !important;
+  top: 5px !important;
+  right: 20px !important;
+  z-index: 5 !important;
+  transition: border .25s linear !important;
+  -webkit-transition: border .25s linear !important; }
+
+.container-list-radio ul li .check::before {
+  display: block !important;
+  position: absolute !important;
+  content: '' !important;
+  border-radius: 100% !important;
+  height: 10px !important;
+  width: 10px !important;
+  top: 5px !important;
+  left: 5px !important;
+  margin: auto !important;
+  transition: background 0.25s linear !important;
+  -webkit-transition: background 0.25s linear !important;
+  right: 20px !important; }
+
+.container-list-radio input[type=radio]:checked ~ .check {
+  border: 5px solid #3a6167 !important; }
+
+.container-list-radio input[type=radio]:checked ~ .check::before {
+  background: #3a6167 !important; }
+
+input[type=radio]:checked ~ label {
+  color: #3a6167; }
+
+select.form-control, .formmtop {
+  margin-top: 6%; }
+
+option {
+  color: #000 !important; }
+
+.submit-form-popup {
+  height: 40px;
+  background: #3a6167 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  text-shadow: none !important;
+  font-size: 16px !important;
+  font-weight: 300;
+  float: right !important;
+  margin-top: 50px !important; }
+
+.textarea-form {
+  padding: 20px !important;
+  padding-top: 10px !important;
+  margin-top: 5%; }
+
 /** Foresterie Desktop **/
 #section1-foresterie {
   background: #fff; }
@@ -862,7 +1089,7 @@ a:hover {
   .foto-no-pad .img-categoria, .foto-no-pad .img-categoria1, .foto-no-pad .img-categoria2, .foto-no-pad .img-categoria3 {
     float: none !important;
     margin: 0 auto;
-    margin-top: 30%;
+    margin-top: 5%;
     margin-bottom: 2%; }
   .foto-no-pad .foto1 .text-categoria p {
     color: #e36b5e !important; }
@@ -871,7 +1098,7 @@ a:hover {
   .foto-no-pad .foto11 .text-categoria p {
     color: #8db4bb !important; }
   .foto-no-pad .text-categoria p {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500; }
 
 .overlay2-hover {
@@ -911,7 +1138,7 @@ a:hover {
     background: #8db4bb; }
   .title-foto-hover h2 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
     color: #fff;
     padding-bottom: 15px; }
 
@@ -920,32 +1147,32 @@ a:hover {
   padding-right: 15px; }
   .text-foto-hover p {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
 
 .service-foto-hover img {
-  height: 40px;
+  height: 30px;
   width: auto; }
 
 .service-foto-hover p {
-  font-size: 14px;
+  font-size: 10px;
   color: #fff;
   font-weight: 300;
-  margin-bottom: 20px; }
+  height: 10px; }
 
 .button-foto-hover {
-  padding-top: 45%; }
+  padding-top: 5%; }
   .button-foto-hover a {
     display: block;
     color: #fff;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 49.9999%;
     border: 2px solid #fff;
     text-align: center;
-    padding-top: 24%;
-    font-size: 20px;
+    line-height: 80px;
+    font-size: 14px;
     margin: 0 auto; }
     .button-foto-hover a:hover {
       background: #fff;
@@ -1060,7 +1287,7 @@ a:hover {
 .contact-right {
   padding-right: 0 !important;
   padding-left: 0;
-  background: url("../img/visual_contatti.jpg");
+  background: url("../img/newsletter_contatti.jpg");
   background-position: center;
   background-size: cover; }
   .contact-right h2 {
@@ -1086,6 +1313,9 @@ a:hover {
   margin: 0 auto;
   margin-top: 80px;
   margin-bottom: 30px; }
+
+.submit-foresterie {
+  margin-top: 13%; }
 
 /** Blog Desktop **/
 .article-wrapper {
@@ -1633,6 +1863,8 @@ a:hover {
     margin: 0 auto !important;
     margin-bottom: 50px !important; }
 
+  .section1 h1 {
+    font-size: 24px; }
   .section1 h2 {
     font-size: 24px; }
   .section1 p {

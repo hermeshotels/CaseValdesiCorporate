@@ -4,6 +4,171 @@
 */
 get_header();
  ?>
+ <div class="sign-popup col-xs-12">
+   <div class="overlay2">
+     <div class="form-signing col-xs-6 col-xs-offset-3">
+       <div class="close-form">
+         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       </div>
+       <form class="" action="index.html" method="post">
+         <div class="row">
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="text" name="" value="" placeholder="Nome e cognome" class="form-control form-contact-input">
+           </div>
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+           </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+          </div>
+        </div>
+        <div class="row">
+         <div class="form-group col-xs-12 col-md-6 text-center">
+            <legend>Sei mai stato ospite in una delle nostre strutture?</legend>
+            <div class="container-list-radio col-md-6 col-xs-12">
+              <ul class="col-xs-3 col-xs-pull-1 radio-button-sign-ul">
+                <li class="col-xs-6">
+                  <input type="radio" id="f-option" name="selector">
+                  <label for="f-option">Si</label>
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-3 col-xs-pull-1">
+                  <input type="radio" id="s-option" name="selector">
+                  <label for="s-option">No</label>
+                  <div class="check"></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+         <div class="form-group col-xs-12 col-md-6 text-center">
+           <legend>Se sì quale?</legend>
+           <select class="form-control">
+             <option selected="true">Scegli la Casa Valdese</option>
+             <option>Foresteria Valdese Firenze</option>
+             <option>Foresteria Valdese Venezia</option>
+             <option>Casa Valdese Roma</option>
+             <option>Casa Cares Reggello (FI)</option>
+             <option>Foresteria Valdese Torre Pellice (TO)</option>
+             <option>Casa Valdese Rio Marina (LI)</option>
+             <option>Casa Valdese Vallecrosia (IM)</option>
+             <option>Casa Valdese PietraLigure (SV)</option>
+             <option>Servizio Cristiano Riesi (CL)</option>
+             <option>Foresteria Valdese Palermo</option>
+             <option>Agape Centro Ecumenico (TO)</option>
+          </select>
+         </div>
+         </div>
+         <div class="row">
+           <div class="form-group col-xs-12 col-md-6 text-center">
+             <legend>Viaggiatore singolo o gruppi?</legend>
+             <div class="container-list-radio col-md-6 col-xs-12">
+               <ul class="col-xs-3 col-xs-pull-1">
+                 <li class="col-xs-6">
+                   <input type="radio" id="f1-option" name="selector">
+                   <label for="f1-option" class="label-mleft">Singolo</label>
+
+                   <div class="check"></div>
+                 </li>
+                 <li class="col-xs-3 col-xs-pull-1">
+                   <input type="radio" id="s1-option" name="selector">
+                   <label for="s1-option" class="label-mleft">Gruppo</label>
+
+                   <div class="check"></div>
+
+                 </li>
+               </ul>
+             </div>
+           </div>
+           <div class="col-xs-12 col-md-6 form-group text-center">
+             <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+
+ <div class="information-popup col-xs-12">
+   <div class="overlay2">
+     <div class="form-information col-xs-6 col-xs-offset-3">
+       <div class="close-form">
+         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       </div>
+       <form class="" action="index.html" method="post">
+         <div class="row">
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="text" name="" value="" placeholder="Nome e cognome" class="form-control form-contact-input">
+           </div>
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+           </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio"></textarea>
+          </div>
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+          </div>
+        </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+
+ <div class="gift-popup col-xs-12">
+   <div class="overlay2">
+     <div class="form-gift col-xs-6 col-xs-offset-3">
+       <div class="close-form">
+         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       </div>
+       <form class="" action="index.html" method="post">
+         <div class="row">
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="text" name="" value="" placeholder="Nome e cognome (di chi regala il buono)" class="form-control form-contact-input">
+           </div>
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+           </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio (Sei interessato a un Gift Voucher in una Casa Valdese in particolare o vuoi informazioni su tutti i nostri Gift Voucher?)"></textarea>
+          </div>
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+          </div>
+        </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+
+
  <div class="foresteria-box-map">
    <div class="overlay2">
      <h2 class="col-xs-12">Foresteria Venezia</h2>
@@ -20,7 +185,7 @@ get_header();
     <div class="valign">
       <div class="container-fluid cf-custom-section1">
         <div class="text-section1 text-center">
-          <h2><?php the_field('titolo_prima_sezione')?></h2>
+          <h1><?php the_field('titolo_prima_sezione')?></h1>
           <p><?php the_field('testo_prima_sezione') ?>
         </div>
         <div class="back-right">
@@ -101,7 +266,7 @@ get_header();
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 41.909986, lng: 12.3959157},
-          zoom: 5,
+          zoom: 6,
           scrollwheel: false,
           styles: [
   {
@@ -370,8 +535,8 @@ get_header();
     <div class="overlay2">
       <h2><?php the_field('titolo_secondo_box')?></h2>
       <?php the_field('testo_secondo_box')?>
-      <a href="<?php the_field('primo_link_secondo_box')?>" class="img-allineate-left"><?php the_field('testo_primo_link_secondo_box')?></a>
-      <a href="<?php the_field('secondo_link_secondo_box')?>" class="img-allineate-right"><?php the_field('testo_secondo_link_secondo_box')?></a>
+      <a href="<?php the_field('primo_link_secondo_box')?>" class="img-allineate-left col-md-6 col-xs-12 informazioni-form"><?php the_field('testo_primo_link_secondo_box')?></a>
+      <a href="" class="img-allineate-right iscriviti-form col-md-6 col-xs-12"><?php the_field('testo_secondo_link_secondo_box')?></a>
     </div>
   </div>
   <div class="col-xs-12 first-image-section4 second-image-section4 third-image-section4 text-center" style="background-image: url('<?php the_field('sfondo_ultimo_box')?>');">
@@ -383,7 +548,7 @@ get_header();
       <div class="container-fluid cf-custom-third-image-section4">
       <?php the_field('testo_ultimo_box')?>
       </div>
-      <a href="<?php the_field('link_ultimo_box')?>"><?php the_field('testo_link_ultimo_box')?></a>
+      <a href="<?php the_field('link_ultimo_box')?>" class="regalo-form"><?php the_field('testo_link_ultimo_box')?></a>
     </div>
   </div>
 </div>

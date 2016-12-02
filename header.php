@@ -264,9 +264,9 @@
 		</div>
 		<div class="social">
 			<ul>
-				<li><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-				<li><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-				<li><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
 			</ul>
 		</div>
 		<div class="lang">
@@ -295,7 +295,7 @@
 					<h1><?php the_title(); ?></h1>
 				<?php else: ?>
 					<img src="<?php the_field('logo_centrale_casavaldesi')?>" alt=""/>
-					<h1><?php the_field('testo_centrale_header')?></h1>
+					<img src="<?php the_field('testo_centrale_header')?>" alt="" class="font-image"/>
 					<a href="#section1" class="scrolldown-page" style="background-image: url('<?php the_field('immagine_scroll');?>');"></a>
 				<?php endif; ?>
 			</div>

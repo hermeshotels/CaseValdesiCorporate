@@ -157,14 +157,17 @@ add_action( 'widgets_init', 'casavaldesicorporate_widgets_init' );
 function casavaldesicorporate_scripts() {
 	wp_enqueue_style( 'casavaldesicorporate-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/layouts/bootstrap.css' );
+	wp_enqueue_style( 'datepicker-css', get_template_directory_uri() . '/layouts/datepicker.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/layouts/main.css' );
 	wp_enqueue_style( 'slider', get_template_directory_uri() . '/layouts/masterslider.css' );
 	wp_enqueue_style( 'slider-skin', get_template_directory_uri() . '/layouts/skins/default/style.css' );
 	wp_enqueue_style( 'slider-demo', get_template_directory_uri() . '/layouts/ms-partialview.css' );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-	wp_enqueue_script( 'casavaldesicorporate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/layouts/jquery-3.1.1.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/layouts/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'casavaldesicorporate-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'datepicker-js', get_template_directory_uri() . '/layouts/bootstrap-datepicker.js', array(), '20151215', true );
+	wp_enqueue_script( 'moment-js', 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'slider-js', get_template_directory_uri() . '/layouts/jquery.easing.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'slider-demo-js', get_template_directory_uri() . '/layouts/masterslider.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'casavaldesicorporate-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

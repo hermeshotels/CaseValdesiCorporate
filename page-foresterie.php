@@ -4,12 +4,110 @@
 */
 get_header();
  ?>
+
+ <div class="foresterie-sign-popup col-xs-12">
+   <div class="overlay2">
+     <div class="foresterie-close-form">
+       <div class="close-form">
+         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       </div>
+     </div>
+     <div class="foresterie-form-signing col-xs-6 col-xs-offset-3">
+       <form class="" action="index.html" method="post">
+         <div class="row">
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="text" name="" value="" placeholder="Nome e cognome" class="form-control form-contact-input">
+           </div>
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+           </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+          </div>
+        </div>
+        <div class="row">
+         <div class="form-group col-xs-12 col-md-6 text-center">
+           <legend>Struttura a cui è interessato</legend>
+             <select class="form-control">
+               <option selected="true">Scegli la Casa Valdese</option>
+               <option>Foresteria Valdese Firenze</option>
+               <option>Foresteria Valdese Venezia</option>
+               <option>Casa Valdese Roma</option>
+               <option>Casa Cares Reggello (FI)</option>
+               <option>Foresteria Valdese Torre Pellice (TO)</option>
+               <option>Casa Valdese Rio Marina (LI)</option>
+               <option>Casa Valdese Vallecrosia (IM)</option>
+               <option>Casa Valdese PietraLigure (SV)</option>
+               <option>Servizio Cristiano Riesi (CL)</option>
+               <option>Foresteria Valdese Palermo</option>
+               <option>Agape Centro Ecumenico (TO)</option>
+            </select>
+           </div>
+           <div class="form-group col-xs-12 col-md-6 text-center">
+             <legend>Numero ospiti di cui bambini</legend>
+             <div class="form-group col-xs-6 col-md-6 formmtop form0padleft">
+               <input type="text" name="" value="" placeholder="0/2 anni" class="form-control form-contact-input">
+             </div>
+             <div class="form-group col-xs-6 col-md-6 formmtop form0padright">
+               <input type="text" name="" value="" placeholder="Fino a 12 anni" class="form-control form-contact-input">
+             </div>
+           </div>
+         </div>
+           <div class="row">
+             <div class="form-group col-xs-6 col-md-6 text-center">
+               <input type="text" name="" value="" placeholder="Numero camere" class="form-control form-contact-input">
+             </div>
+             <div class="form-group col-xs-6 col-md-6 text-center">
+               <input type="text" name="" value="" placeholder="Promozioni" class="form-control form-contact-input">
+             </div>
+           </div>
+           <div class="row">
+             <div class="form-group col-xs-6 col-md-6 text-center">
+               <div class='input-group date' id='datetimepicker6'>
+                 <input type='text' class="form-control calendar-form" />
+                 <span class="input-group-addon">
+                     <i class="fa fa-calendar" aria-hidden="true"></i>
+                 </span>
+               </div>
+             </div>
+             <div class="form-group col-xs-6 col-md-6 text-center">
+               <div class='input-group date' id='datetimepicker7'>
+                 <input type='text' class="form-control calendar-form" />
+                  <span class="input-group-addon">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                  </span>
+                </div>
+              </div>
+           </div>
+           <div class="row">
+             <div class="col-xs-6 form-group checkbox-component">
+               <input type="checkbox" name="" value="" class="checkbox-div-message">Spunta se vuoi inserire delle note
+             </div>
+             <div class="col-xs-12 col-md-6 form-group text-center textarea-container">
+               <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio"></textarea>
+             </div>
+             <div class="col-xs-12 col-md-6 form-group text-center submit-foresterie">
+               <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+             </div>
+           </div>
+         </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
+
  <div class="section1" id="section1-foresterie">
    <div class="valign-wrapper">
      <div class="valign">
        <div class="container-fluid cf-custom-section1">
          <div class="text-section1 text-center col-xs-12">
-           <h2><?php the_field('titolo_prima_sezione')?></h2>
+           <h1><?php the_field('titolo_prima_sezione')?></h1>
            <?php the_field('testo_prima_sezione')?>
          </div>
          <div class="back-right">
@@ -45,28 +143,24 @@ get_header();
          <div class="title-section2-foresterie text-center">
            <p><?php the_field('titolo_seconda_lista_icone')?><p>
          </div>
-         <div class="col-md-2 col-md-offset-1 col-xs-12 strutture-foresterie text-center">
+         <div class="col-md-3 col-xs-12 strutture-foresterie text-center">
            <p><?php the_field('testo_prima_icona_seconda_lista')?><p>
            <img src="<?php the_field('prima_icona_seconda_lista')?>" alt=""/>
          </div>
-         <div class="col-md-2 col-xs-12 strutture-foresterie text-center">
+         <div class="col-md-3 col-xs-12 strutture-foresterie text-center">
            <p><?php the_field('testo_seconda_icona_seconda_lista')?><p>
            <img src="<?php the_field('seconda_icona_seconda_lista')?>" alt=""/>
          </div>
-         <div class="col-md-2 col-xs-12 strutture-foresterie text-center">
+         <div class="col-md-3 col-xs-12 strutture-foresterie text-center">
            <p><?php the_field('testo_terza_icona_seconda_lista')?><p>
            <img src="<?php the_field('terza_icona_seconda_lista')?>" alt=""/>
          </div>
-         <div class="col-md-2 col-xs-12 strutture-foresterie text-center">
+         <div class="col-md-3 col-xs-12 strutture-foresterie text-center">
            <p><?php the_field('testo_quarta_icona_seconda_lista')?><p>
            <img src="<?php the_field('quarta_icona_seconda_lista')?>" alt=""/>
          </div>
-         <div class="col-md-2 push-md-1 col-xs-12 strutture-foresterie text-center">
-           <p><?php the_field('testo_quinta_icona_seconda_lista')?><p>
-           <img src="<?php the_field('quinta_icona_seconda_lista')?>" alt=""/>
-         </div>
          <div class="contact-info text-center">
-           <a href="<?php the_field('link_informazioni')?>"><?php the_field('testo_link_informazioni')?></a>
+           <a href="" class="foresterie-informazioni"><?php the_field('testo_link_informazioni')?></a>
          </div>
          <div class="back-left">
 
@@ -121,18 +215,22 @@ get_header();
                   </p>
                 </div>
                 <div class="service-foto-hover">
+                  <div class="container-fluid">
+                    <div class="row">
                   <?php
                   if(have_rows('icone')):
                     while (have_rows('icone')): the_row();
                    ?>
-                   <div class="col-xs-3">
+                   <div class="col-md-3 icona-hover-foresterie">
                      <img src="<?php the_sub_field('immagine_icona')?>" alt="" />
                      <p>
                        <?php the_sub_field('testo_icona')?>
                      </p>
                    </div>
-                 <?php  endwhile; ?>
-               <?php endif; ?>
+                  <?php  endwhile; ?>
+                  <?php endif; ?>
+                    </div>
+                  </div>
                   <div class="button-foto-hover text-center">
                     <?php if(get_field('book_link')): ?>
                     <div class="col-xs-4">
@@ -141,12 +239,12 @@ get_header();
                   <?php endif; ?>
                   <?php if(get_field('map_link')): ?>
                     <div class="col-xs-4">
-                      <a href="<?php the_field('map_link')?>"><?php the_field('testo_map_link')?></a>
+                      <a href="<?php the_field('map_link')?>" target="_blank"><?php the_field('testo_map_link')?></a>
                     </div>
                     <?php endif; ?>
                     <?php if(get_field('explore_link')): ?>
                     <div class="col-xs-4">
-                      <a href="<?php the_field('explore_link')?>"><?php the_field('testo_expore_link')?></a>
+                      <a href="<?php the_field('explore_link')?>" target="_blank"><?php the_field('testo_expore_link')?></a>
                     </div>
                     <?php endif; ?>
                   </div>

@@ -27,23 +27,24 @@
         </div>
       </div>
       <div class="col-md-4 col-xs-12 membri-footer">
-        <h2>Membro di</h2>
+        <h2><?php the_field('titolo_box_membri_footer', 'options') ?></h2>
         <img src="<?php echo get_template_directory_uri() . '/img/homepage/logofooter.png'?>" alt="" width="73px" height="auto"/>
       </div>
       <div class="col-md-4 col-xs-12 social-footer">
-        <h2>Social e Contatti</h2>
+        <h2><?php the_field('titolo_box_social_footer', 'options') ?></h2>
         <ul class="col-xs-12">
-          <li class="col-xs-4"><a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-					<li class="col-xs-4"><a href="#"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-					<li class="col-xs-4"><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+          <li class="col-xs-4"><a href="<?php the_field('link_primo_social_footer', 'options') ?>"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<li class="col-xs-4"><a href="<?php the_field('link_secondo_social_footer', 'options') ?>"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<li class="col-xs-4"><a href="<?php the_field('link_terzo_social_footer', 'options') ?>"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
         </ul>
         <p class="cb"></p>
-        <span class="mail-footer">Email: </span><a href="mailto:accoglienza@diaconiavaldese.com" class="mail-link">accoglienza@diaconiavaldese.com</a>
+        <span class="mail-footer"><?php the_field('testo_mail_social_footer', 'options') ?> </span><a href="<?php the_field('link_testo_mail_social_footer', 'options') ?>"
+          class="mail-link"><?php the_field('testo_indirizzo_mail_social_footer', 'options') ?></a>
       </div>
       <div class="col-md-4 col-xs-12 newsletter-footer">
-        <h2>Newsletter</h2>
+        <h2><?php the_field('titolo_box_newsletter_footer', 'options') ?></h2>
         <p>
-          Iscriviti alla <span class="newsletter">Newsletter</span>
+          <?php the_field('testo_box_newsletter_footer', 'options') ?> <span class="newsletter"><?php the_field('testo_grassetto_box_newsletter_footer', 'options') ?></span>
         </p>
         <form class="" action="index.html" method="post">
           <input type="mail" name="email" value="" class="input-mail" placeholder="your mail">
@@ -56,30 +57,30 @@
 <div class="bottom-footer text-center">
   <div class="valign-wrapper">
     <div class="valign">
-      <div class="container-fluid cf-footer">
+      <div class="container-fluid">
         <div class="col-md-offset-1 col-md-2 col-xs-12 category-bottom-footer">
           <p>
-            © 2016 Commissione Sinodale per la Diaconia
+            <?php the_field('primo_testo_sub_footer', 'options') ?>
           </p>
         </div>
         <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p>
-            P.IVA/C.Fiscale 07639750012
+            <?php the_field('secondo_testo_sub_footer', 'options') ?>
           </p>
         </div>
         <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p>
-            <a href="http://www.verne-sas.it/">Web & Com ®</a>
+            <a href="<?php the_field('link_terzo_testo_sub_footer', 'options') ?>"><?php the_field('terzo_testo_sub_footer', 'options') ?></a>
           </p>
         </div>
         <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p>
-            Powered by WEBJ
+            <?php the_field('quarto_testo_sub_footer', 'options') ?><a href="<?php the_field('link_quarto_testo_sub_footer', 'options') ?>"><?php the_field('testo_del_link_del_quarto_testo_sub_footer', 'options') ?></a>
           </p>
         </div>
         <div class="col-md-2 col-xs-12 category-bottom-footer">
           <p class="no-border">
-            Privacy & Cookie
+            <a href="<?php the_field('link_quinto_testo_sub_footer', 'options') ?>"><?php the_field('quinto_testo_sub_footer', 'options') ?></a>
           </p>
         </div>
       </div>
@@ -133,7 +134,6 @@ jQuery('.mob-menu-trigger').on('click', function(){
     $menuicon.html('<i class="fa fa-times" aria-hidden="true"></i>');
   }
 });
-
 
     jQuery('.remove-foto-hover').on('click', function(){
       jQuery('.foto2').next('.overlay2-hover').removeClass('active');
@@ -262,5 +262,89 @@ slider.control('slideinfo',{insertTo:"#partial-view-1" , autohide:false, align:'
 
 
 	</script>
+  <script type="text/javascript">
+jQuery(document).ready(function(e){
+  jQuery('.iscriviti-form').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.sign-popup').addClass('sign-popup-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.sign-popup').removeClass('sign-popup-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+jQuery(document).ready(function(e){
+  jQuery('.informazioni-form').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.information-popup').addClass('information-popup-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.information-popup').removeClass('information-popup-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+jQuery(document).ready(function(e){
+  jQuery('.regalo-form').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.gift-popup').addClass('gift-popup-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.gift-popup').removeClass('gift-popup-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+jQuery(document).ready(function(e){
+  jQuery('.foresterie-informazioni').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.foresterie-sign-popup').addClass('foresterie-sign-popup-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.foresterie-sign-popup').removeClass('foresterie-sign-popup-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+
+  </script>
+  <script type="text/javascript">
+  jQuery(document).ready(function(e){
+     jQuery(function () {
+         jQuery('#datetimepicker6').datetimepicker();
+         jQuery('#datetimepicker7').datetimepicker({
+             useCurrent: false //Important! See issue #1075
+         });
+         jQuery("#datetimepicker6").on("dp.change", function (e) {
+             jQuery('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+         });
+         jQuery("#datetimepicker7").on("dp.change", function (e) {
+             jQuery('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+         });
+     });
+   });
+ </script>
+ <script type="text/javascript">
+ jQuery(document).ready(function(){
+   jQuery('.checkbox-div-message').on('click', function() {
+     jQuery('.textarea-container').addClass('textarea-container-active');
+     jQuery('.foresterie-form-signing').addClass('foresterie-form-signing-active');
+     jQuery('.checkbox-component').css('display', 'none');
+     jQuery('body').css('overflow', 'hidden');
+   });
+   jQuery('.close-x').on('click', function() {
+     jQuery('.textarea-container').removeClass('textarea-container-active');
+     jQuery('.foresterie-form-signing').removeClass('foresterie-form-signing-active');
+     jQuery('.checkbox-component').css('display', 'block');
+     jQuery('body').css('overflow', 'scroll-y');
+   });
+ });
+
+ </script>
 </body>
 </html>

@@ -4,12 +4,13 @@
 */
 get_header();
  ?>
+
 <div class="section1" id="section1-sostenibilita">
  <div class="valign-wrapper">
    <div class="valign">
      <div class="container-fluid cf-custom-section1">
        <div class="text-section1 text-center col-xs-12">
-         <h2><?php the_field('titolo_prima_sezione')?></h2>
+         <h1><?php the_field('titolo_prima_sezione')?></h1>
          <?php the_field('testo_prima_sezione')?>
        </div>
        <div class="back-right">
