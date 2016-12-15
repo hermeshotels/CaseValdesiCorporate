@@ -31,7 +31,7 @@
 	height: 50px;
 	cursor: pointer;
 	top: 50%;
-	left: -70px;
+	left: -63px;
 	margin-top: -20px;
 	position: absolute;
 	z-index: 110;
@@ -39,7 +39,7 @@
 	border: 2px solid #84a6ab;
 }
 .ms-skin-default .ms-nav-next {
-	right: -70px;
+	right: -63px;
 	left: auto;
 	background-position: -79px -100px;
 }

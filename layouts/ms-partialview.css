@@ -22,9 +22,14 @@
 
 .ms-partialview-template .ms-slide-info p {
 	color: #3f4b56;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.8;
 	font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+	.ms-partialview-template .ms-slide-info p {
+		font-size: 14px;
+	}
 }
 
 /* Layers */

@@ -8,6 +8,97 @@
  */
 
 get_header(); ?>
+
+<div class="sign-popup-blog-article col-xs-12">
+  <div class="overlay2">
+    <div class="sign-popup-blog-article col-xs-6 col-xs-offset-3">
+      <div class="close-form close-x">
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+      </div>
+      <form class="" action="index.html" method="post">
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Nome e cognome" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+          </div>
+       </div>
+       <div class="row">
+         <div class="form-group col-md-6 col-xs-12">
+           <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+         </div>
+         <div class="form-group col-md-6 col-xs-12">
+           <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+         </div>
+       </div>
+       <div class="row">
+        <div class="form-group col-xs-12 col-md-6 text-center">
+           <legend>Sei mai stato ospite in una delle nostre strutture?</legend>
+           <div class="container-list-radio col-md-6 col-xs-12">
+             <ul class="col-xs-3 col-xs-pull-1 radio-button-sign-ul">
+               <li class="col-xs-6">
+                 <input type="radio" id="f-option" name="selector">
+                 <label for="f-option">Si</label>
+                 <div class="check"></div>
+               </li>
+               <li class="col-xs-3 col-xs-pull-1">
+                 <input type="radio" id="s-option" name="selector">
+                 <label for="s-option">No</label>
+                 <div class="check"></div>
+               </li>
+             </ul>
+           </div>
+         </div>
+        <div class="form-group col-xs-12 col-md-6 text-center">
+          <legend>Se sì quale?</legend>
+          <select class="form-control">
+            <option selected="true">Scegli la Casa Valdese</option>
+            <option>Foresteria Valdese Firenze</option>
+            <option>Foresteria Valdese Venezia</option>
+            <option>Casa Valdese Roma</option>
+            <option>Casa Cares Reggello (FI)</option>
+            <option>Foresteria Valdese Torre Pellice (TO)</option>
+            <option>Casa Valdese Rio Marina (LI)</option>
+            <option>Casa Valdese Vallecrosia (IM)</option>
+            <option>Casa Valdese PietraLigure (SV)</option>
+            <option>Servizio Cristiano Riesi (CL)</option>
+            <option>Foresteria Valdese Palermo</option>
+            <option>Agape Centro Ecumenico (TO)</option>
+         </select>
+        </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-xs-12 col-md-6 text-center">
+            <legend>Viaggiatore singolo o gruppi?</legend>
+            <div class="container-list-radio col-md-6 col-xs-12">
+              <ul class="col-xs-3 col-xs-pull-1">
+                <li class="col-xs-6">
+                  <input type="radio" id="f1-option" name="selector">
+                  <label for="f1-option" class="label-mleft">Singolo</label>
+
+                  <div class="check"></div>
+                </li>
+                <li class="col-xs-3 col-xs-pull-1">
+                  <input type="radio" id="s1-option" name="selector">
+                  <label for="s1-option" class="label-mleft">Gruppo</label>
+
+                  <div class="check"></div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
 <div class="section1" id="section1-blog-article">
  <div class="valign-wrapper">
    <div class="valign">
@@ -37,11 +128,7 @@ get_header(); ?>
           <div class="about-blog">
             <h2>About the blog</h2>
             <img src="<?php echo get_template_directory_uri() . '/img/visual_contatti.jpg' ?>" alt="" />
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam faucibus rhoncus elementum. Nunc pulvinar
-              ultrices purus nec gravida. Donec dolor risus, convallis quis euismod quis, ultricies sed arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-              per inceptos himenaeos.
-            </p>
+            <p><?php the_field('about_the_blog');?></p>
           </div>
           <div class="last-comment-fb">
             <h2>Last comment on Facebook</h2>
@@ -106,7 +193,7 @@ get_header(); ?>
             <div class="book-sidebar col-xs-12">
               <h2>Prenota ora</h2>
               <div class="col-md-4 col-xs-12 tag-link-sidebar">
-                <a href="#">Book</a>
+                <a href="" class="book-prenotazione-blog-article">Book</a>
               </div>
             </div>
           </div>
@@ -115,7 +202,7 @@ get_header(); ?>
     </div>
   </div>
 </div>
-<div class="section1" id="section2-blog-article">
+<div class="section2" id="section2-blog-article">
  <div class="valign-wrapper">
    <div class="valign">
      <div class="cf0pad">

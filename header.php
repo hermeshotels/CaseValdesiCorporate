@@ -16,6 +16,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"Questo sito usa i cookie per assicurati una migliore esperienza","dismiss":"Ok!","learnMore":"Maggiori informazioni","link":"http://192.168.111.109/casavaldesicorporate/privacy","theme":"dark-bottom"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->
+<link href="<?php echo get_template_directory_uri() . '/layouts/datedropper.css'; ?>" rel="stylesheet" type="text/css" />
+<script src="<?php echo get_template_directory_uri() . '/layouts/datedropper.js'; ?>"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -33,9 +42,6 @@
 		</div>
 		<div class="logo">
 			<a href="#">
-				<?xml version="1.0" encoding="utf-8"?>
-				<!-- Generator: Adobe Illustrator 16.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 				<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 width="600px" height="500px" viewBox="0 0 600 500" enable-background="new 0 0 600 500" xml:space="preserve">
 				<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M237.096,40.567c19.174-6.784,49.52-9.205,65.127,3.594
@@ -264,9 +270,13 @@
 		</div>
 		<div class="social">
 			<ul>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-				<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <!--
+				<li><a href="<?php the_field('link_primo_social_footer', 'options') ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        -->
+				<li><a href="<?php the_field('link_secondo_social_footer', 'options') ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <!--
+				<li><a href="<?php the_field('link_terzo_social_footer', 'options') ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        -->
 			</ul>
 		</div>
 		<div class="lang">
@@ -295,8 +305,10 @@
 					<h1><?php the_title(); ?></h1>
 				<?php else: ?>
 					<img src="<?php the_field('logo_centrale_casavaldesi')?>" alt=""/>
+          <?php if(count(get_field('testo_centrale_header'))): ?>
 					<img src="<?php the_field('testo_centrale_header')?>" alt="" class="font-image"/>
-					<a href="#section1" class="scrolldown-page" style="background-image: url('<?php the_field('immagine_scroll');?>');"></a>
+          <?php endif; ?>
+					<img src="<?php echo get_template_directory_uri() . '/img/homepage/iconascrolldown.png'?>" class="scrolldown-page bounce scrollTo" data-target=".section1");>
 				<?php endif; ?>
 			</div>
 		</div>

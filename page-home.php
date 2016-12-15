@@ -7,8 +7,8 @@ get_header();
  <div class="sign-popup col-xs-12">
    <div class="overlay2">
      <div class="form-signing col-xs-6 col-xs-offset-3">
-       <div class="close-form">
-         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       <div class="close-form close-x">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
        <form class="" action="index.html" method="post">
          <div class="row">
@@ -85,7 +85,7 @@ get_header();
              </div>
            </div>
            <div class="col-xs-12 col-md-6 form-group text-center">
-             <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+             <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
            </div>
          </div>
        </form>
@@ -97,8 +97,8 @@ get_header();
  <div class="information-popup col-xs-12">
    <div class="overlay2">
      <div class="form-information col-xs-6 col-xs-offset-3">
-       <div class="close-form">
-         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       <div class="close-form close-x">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
        <form class="" action="index.html" method="post">
          <div class="row">
@@ -122,7 +122,7 @@ get_header();
             <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio"></textarea>
           </div>
           <div class="col-xs-12 col-md-6 form-group text-center">
-            <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
           </div>
         </div>
        </form>
@@ -134,8 +134,8 @@ get_header();
  <div class="gift-popup col-xs-12">
    <div class="overlay2">
      <div class="form-gift col-xs-6 col-xs-offset-3">
-       <div class="close-form">
-         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       <div class="close-form close-x">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
        <form class="" action="index.html" method="post">
          <div class="row">
@@ -159,7 +159,7 @@ get_header();
             <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio (Sei interessato a un Gift Voucher in una Casa Valdese in particolare o vuoi informazioni su tutti i nostri Gift Voucher?)"></textarea>
           </div>
           <div class="col-xs-12 col-md-6 form-group text-center">
-            <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
           </div>
         </div>
        </form>
@@ -184,19 +184,19 @@ get_header();
   <div class="valign-wrapper">
     <div class="valign">
       <div class="container-fluid cf-custom-section1">
-        <div class="text-section1 text-center">
-          <h1><?php the_field('titolo_prima_sezione')?></h1>
-          <p><?php the_field('testo_prima_sezione') ?>
-        </div>
-        <div class="back-right">
+          <div class="text-section1 text-center">
+            <h1><?php the_field('titolo_prima_sezione')?></h1>
+            <p><?php the_field('testo_prima_sezione') ?>
+          </div>
+          <div class="back-right">
 
-        </div>
-        <div class="back-left">
+          </div>
+          <div class="back-left">
 
-        </div>
-        <div class="button-section1 text-center">
-          <a href="<?php the_field('link_prima_sezione')?>"><?php the_field('testo_link_prima_sezione')?></a>
-        </div>
+          </div>
+          <div class="button-section1 text-center">
+            <a href="<?php the_field('link_prima_sezione')?>"><?php the_field('testo_link_prima_sezione')?></a>
+          </div>
       </div>
     </div>
   </div>
@@ -219,7 +219,7 @@ get_header();
             <p><?php the_field('testo_seconda_categoria')?></p>
           </div>
         </div>
-        <div class="col-md-3 col-xs-12 category-map" data-cat="Resto">
+        <div class="col-md-3 col-xs-12 category-map" data-cat="Immersi nella natura">
           <div class="img-categoria2" style="background-image: url('<?php the_field('immagine_terza_categoria')?>'); background-color: <?php the_field('colore_di_sfondo_immagine_terza_categoria')?>;">
           </div>
           <div class="text-categoria">
@@ -237,10 +237,11 @@ get_header();
     </div>
   </div>
 </div>
-<div class="section3">
+<div class="section-map">
   <?php
   $args = array(
-    'post_type' => 'foresterie'
+    'post_type' => 'foresterie',
+    'posts_per_page' => '100'
                );
   $posts = new WP_Query($args);
   while( $posts->have_posts() ) : $posts->the_post();
@@ -263,10 +264,21 @@ get_header();
   </div>
   <script>
       var map;
+      var zoom = 6;
+      function ismobile(){
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+         return true;
+        }else{
+          return false;
+        }
+      }
+      if(ismobile()){
+        zoom = 5;
+      }
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 41.909986, lng: 12.3959157},
-          zoom: 6,
+          zoom: zoom,
           scrollwheel: false,
           styles: [
   {
@@ -473,6 +485,7 @@ get_header();
           markerList.push(marker);
         });
 
+        var currentInfo = null;
         function showMarker(category){
 
           for(var i = 0; i < visibleMarker.length; i++){
@@ -487,23 +500,35 @@ get_header();
                 var infoW = new google.maps.InfoWindow({
                   content: '<div class="iw-title">' + markerList[i].title + '</div>' +
                   '<div class="iw-foto"> <img src="' + markerList[i].img + '"></div>"' +
-                  '<a class="iw-link" href="' + markerList[i].link + '">' + markerList[i].linktext + '</a>'
+                  '<a class="iw-link" href="' + markerList[i].link + '" target="_blank">' + markerList[i].linktext + '</a>'
                 });
                 var marker = new google.maps.Marker(markerList[i]);
+                marker.infoW = infoW;
                 marker.addListener('click', function(){
-                  infoW.open(map, marker)
+                  if(currentInfo){
+                    currentInfo.close();
+                    map.setPosition(new google.maps.LatLng(41.909986, 12.3959157));
+                  }
+                  this.infoW.open(map, this);
+                  currentInfo = this.infoW;
                 })
                 visibleMarker.push(marker);
               }
             }else{
               var infoW = new google.maps.InfoWindow({
                 content: '<div class="iw-title">' + markerList[i].title + '</div>' +
-                '<div class="iw-foto"> <img src="' + markerList[i].img + '"></div>"' +
-                '<a class="iw-link" href="' + markerList[i].link + '">' + markerList[i].linktext + '</a>'
+                '<div class="iw-foto"> <img src="' + markerList[i].img + '"></div>' +
+                '<a class="iw-link" href="' + markerList[i].link + '" target="_blank">' + markerList[i].linktext + '</a>'
               });
               var marker = new google.maps.Marker(markerList[i]);
+              marker.infoW = infoW;
               marker.addListener('click', function(){
-                infoW.open(map, marker)
+                if(currentInfo){
+                  currentInfo.close();
+                  map.setPosition(new google.maps.LatLng(41.909986, 12.3959157));
+                }
+                this.infoW.open(map, this);
+                currentInfo = this.infoW;
               })
               visibleMarker.push(marker);
             }

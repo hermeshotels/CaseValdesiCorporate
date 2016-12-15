@@ -41,21 +41,21 @@ get_header();
        </div>
        <div class="contact-right col-md-6 col-xs-12 text-center">
          <div class="overlay2 col-md-6 col-xs-12">
-         <div class="icon-contact">
-         </div>
-         <h2 class="col-xs-12"><?php the_field('titolo_newsletter')?></h2>
-         <p class="col-xs-12">
-           <?php the_field('testo_newsletter')?>
-         </p>
+           <div class="icon-contact">
+           </div>
+           <h2 class="col-xs-12"><?php the_field('titolo_newsletter')?></h2>
+           <p class="col-xs-12">
+             <?php the_field('testo_newsletter')?>
+           </p>
          <div class="contact-newsletter col-xs-12">
            <form class="" action="index.html" method="post">
-             <input type="mail" name="email" value="" class="input-mail col-md-9 col-xs-12" placeholder="your email address">
-             <input type="submit" name="invia" value="Invia" class="submit-newsletter col-md-3 col-xs-12">
+             <input type="mail" name="email" value="" class="input-mail col-md-6 col-md-offset-3 col-xs-12" placeholder="your email address">
+             <input type="submit" name="invia" value="Invia" class="submit-newsletter col-md-offset-5 col-md-2 col-xs-12">
            </form>
          </div>
-         </div>
-       </div>
-     </div>
+        </div>
+      </div>
+    </div>
    </div>
  </div>
 </div>

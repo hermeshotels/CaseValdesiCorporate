@@ -8,8 +8,8 @@ get_header();
  <div class="foresterie-sign-popup col-xs-12">
    <div class="overlay2">
      <div class="foresterie-close-form">
-       <div class="close-form">
-         <img src="<?php echo get_template_directory_uri() . '/img/close.png'?>" alt="" width="35px" height="auto" class="close-x">
+       <div class="close-form close-x">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
        </div>
      </div>
      <div class="foresterie-form-signing col-xs-6 col-xs-offset-3">
@@ -60,24 +60,16 @@ get_header();
          </div>
            <div class="row">
              <div class="form-group col-xs-6 col-md-6 text-center">
-               <input type="text" name="" value="" placeholder="Numero camere" class="form-control form-contact-input">
-             </div>
-             <div class="form-group col-xs-6 col-md-6 text-center">
-               <input type="text" name="" value="" placeholder="Promozioni" class="form-control form-contact-input">
-             </div>
-           </div>
-           <div class="row">
-             <div class="form-group col-xs-6 col-md-6 text-center">
-               <div class='input-group date' id='datetimepicker6'>
-                 <input type='text' class="form-control calendar-form" />
+               <div class='input-group date'>
+                 <input type='text' class="form-control calendar-form" data-large-mode="true" data-large-default="true" data-lang="it"/>
                  <span class="input-group-addon">
                      <i class="fa fa-calendar" aria-hidden="true"></i>
                  </span>
                </div>
              </div>
              <div class="form-group col-xs-6 col-md-6 text-center">
-               <div class='input-group date' id='datetimepicker7'>
-                 <input type='text' class="form-control calendar-form" />
+               <div class='input-group date'>
+                 <input type='text' class="form-control calendar-form" data-large-mode="true" data-large-default="true" data-lang="it"/>
                   <span class="input-group-addon">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                   </span>
@@ -85,14 +77,22 @@ get_header();
               </div>
            </div>
            <div class="row">
-             <div class="col-xs-6 form-group checkbox-component">
+             <div class="form-group col-xs-6 col-md-6 text-center room-promotions">
+               <input type="text" name="" value="" placeholder="Numero camere" class="form-control form-contact-input">
+             </div>
+             <div class="form-group col-xs-6 col-md-6 text-center room-promotions">
+               <input type="text" name="" value="" placeholder="Promozioni" class="form-control form-contact-input">
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-xs-12 col-md-6 form-group checkbox-component">
                <input type="checkbox" name="" value="" class="checkbox-div-message">Spunta se vuoi inserire delle note
              </div>
              <div class="col-xs-12 col-md-6 form-group text-center textarea-container">
                <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio"></textarea>
              </div>
              <div class="col-xs-12 col-md-6 form-group text-center submit-foresterie">
-               <input type="submit" name="" value="Invia" class="submit-form-popup col-xs-3">
+               <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
              </div>
            </div>
          </div>
@@ -100,6 +100,60 @@ get_header();
      </div>
    </div>
  </div>
+
+ <div class="information-popup-book col-xs-12">
+   <div class="overlay2">
+     <div class="form-information-book col-xs-6 col-xs-offset-3">
+       <div class="close-form close-x">
+         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+       </div>
+       <form class="" action="index.html" method="post">
+         <div class="row">
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="text" name="" value="" placeholder="Nome e cognome" class="form-control form-contact-input">
+           </div>
+           <div class="form-group col-md-6 col-xs-12">
+             <input type="email" name="" value="" placeholder="Email" class="form-control form-contact-input">
+           </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Città" class="form-control form-contact-input">
+          </div>
+          <div class="form-group col-md-6 col-xs-12">
+            <input type="text" name="" value="" placeholder="Stato" class="form-control form-contact-input">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12 col-xs-12">
+            <select class="form-control select-foresterie" disabled>
+              <?php
+              $args = array(
+                'post_type' => 'foresterie',
+                'posts_per_page' => '100'
+                         );
+              $posts = new WP_Query($args);
+              while( $posts->have_posts() ) : $posts->the_post();
+              ?>
+              <option value="<?php the_field('id_univoco')?>"><?php the_title(); ?> </option>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
+           </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <textarea name="name" rows="8" cols="80" class="textarea-form" placeholder="Messaggio"></textarea>
+          </div>
+          <div class="col-xs-12 col-md-6 form-group text-center">
+            <input type="submit" name="" value="Invia" class="submit-form-popup col-md-3 col-xs-12">
+          </div>
+        </div>
+       </form>
+     </div>
+   </div>
+ </div>
+
 
 
  <div class="section1" id="section1-foresterie">
@@ -136,7 +190,7 @@ get_header();
      </div>
    </div>
  </div>
- <div class="section1" id="section2-foresterie">
+ <div class="section2" id="section2-foresterie">
    <div class="valign-wrapper">
      <div class="valign">
        <div class="container-fluid cf-custom-section1">
@@ -169,7 +223,7 @@ get_header();
      </div>
    </div>
  </div>
- <div class="section1" id="section3-foresterie">
+ <div class="section3" id="section3-foresterie">
    <div class="valign-wrapper">
      <div class="valign">
        <div class="col-xs-12 foto-no-pad text-center">
@@ -193,7 +247,8 @@ get_header();
            <?php
            $args = array(
              'post_type' => 'foresterie',
-             'category__in' => array($categoria->term_id)
+             'category__in' => array($categoria->term_id),
+             'posts_per_page' => '100'
                       );
            $posts = new WP_Query($args);
            while( $posts->have_posts() ) : $posts->the_post();
@@ -221,7 +276,7 @@ get_header();
                   if(have_rows('icone')):
                     while (have_rows('icone')): the_row();
                    ?>
-                   <div class="col-md-3 icona-hover-foresterie">
+                   <div class="col-md-3 col-xs-3 icona-hover-foresterie">
                      <img src="<?php the_sub_field('immagine_icona')?>" alt="" />
                      <p>
                        <?php the_sub_field('testo_icona')?>
@@ -232,11 +287,11 @@ get_header();
                     </div>
                   </div>
                   <div class="button-foto-hover text-center">
-                    <?php if(get_field('book_link')): ?>
+
                     <div class="col-xs-4">
-                      <a href="<?php the_field('book_link')?>"><?php the_field('testo_book_link')?></a>
+                      <a href="<?php the_field('book_link')?>" data-id="<?php the_field('id_univoco');?>" class="book-prenotazione"><?php the_field('testo_book_link')?></a>
                     </div>
-                  <?php endif; ?>
+
                   <?php if(get_field('map_link')): ?>
                     <div class="col-xs-4">
                       <a href="<?php the_field('map_link')?>" target="_blank"><?php the_field('testo_map_link')?></a>
@@ -249,9 +304,6 @@ get_header();
                     <?php endif; ?>
                   </div>
                 </div>
-              </div>
-              <div class="info-nascoste">
-                <a href="#">Scopri di più</a>
               </div>
             </div>
           <?php endwhile; ?>

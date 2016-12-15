@@ -28,14 +28,21 @@
       </div>
       <div class="col-md-4 col-xs-12 membri-footer">
         <h2><?php the_field('titolo_box_membri_footer', 'options') ?></h2>
-        <img src="<?php echo get_template_directory_uri() . '/img/homepage/logofooter.png'?>" alt="" width="73px" height="auto"/>
+        <ul class="col-xs-12">
+          <li class="col-xs-4"><img src="<?php echo get_template_directory_uri() . '/img/homepage/logofooter.png'?>" alt="" width="73px" height="auto"/></li>
+          <li class="col-xs-4"><img src="<?php echo get_template_directory_uri() . '/img/homepage/logofooterchi.png'?>" alt="" width="146px" height="auto"/></li>
+        </ul>
       </div>
       <div class="col-md-4 col-xs-12 social-footer">
         <h2><?php the_field('titolo_box_social_footer', 'options') ?></h2>
         <ul class="col-xs-12">
-          <li class="col-xs-4"><a href="<?php the_field('link_primo_social_footer', 'options') ?>"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-					<li class="col-xs-4"><a href="<?php the_field('link_secondo_social_footer', 'options') ?>"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
-					<li class="col-xs-4"><a href="<?php the_field('link_terzo_social_footer', 'options') ?>"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+          <!--
+          <li class="col-xs-4"><a href="<?php the_field('link_primo_social_footer', 'options') ?>"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></li>
+          -->
+					<li class="col-xs-4"><a href="<?php the_field('link_secondo_social_footer', 'options') ?>"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+          <!--
+					<li class="col-xs-4"><a href="<?php the_field('link_terzo_social_footer', 'options') ?>"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
+          -->
         </ul>
         <p class="cb"></p>
         <span class="mail-footer"><?php the_field('testo_mail_social_footer', 'options') ?> </span><a href="<?php the_field('link_testo_mail_social_footer', 'options') ?>"
@@ -249,8 +256,8 @@ jQuery('.mob-menu-trigger').on('click', function(){
 var slider = new MasterSlider();
 
 slider.setup('masterslider' , {
-  width:1200,
-  height:550,
+  width:1000,
+  height:450,
   space:10,
   loop:true,
   view:'fadeWave',
@@ -311,24 +318,59 @@ jQuery(document).ready(function(e){
     jQuery('body').css('overflow', 'auto');
   });
 });
+jQuery(document).ready(function(e){
+  jQuery('.book-prenotazione').on('click', function(e) {
+    e.preventDefault();
+    var id_univoco = jQuery(this).data('id');
+    jQuery('.select-foresterie').val(id_univoco);
+    jQuery('.information-popup-book').addClass('information-popup-book-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.information-popup-book').removeClass('information-popup-book-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
 
-  </script>
-  <script type="text/javascript">
-  jQuery(document).ready(function(e){
-     jQuery(function () {
-         jQuery('#datetimepicker6').datetimepicker();
-         jQuery('#datetimepicker7').datetimepicker({
-             useCurrent: false //Important! See issue #1075
-         });
-         jQuery("#datetimepicker6").on("dp.change", function (e) {
-             jQuery('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-         });
-         jQuery("#datetimepicker7").on("dp.change", function (e) {
-             jQuery('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-         });
-     });
-   });
- </script>
+jQuery(document).ready(function(e){
+  jQuery('.book-prenotazione-blog').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.sign-popup-blog').addClass('sign-popup-blog-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.sign-popup-blog').removeClass('sign-popup-blog-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+
+jQuery(document).ready(function(e){
+  jQuery('.book-prenotazione-blog').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.sign-popup-blog').addClass('sign-popup-blog-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.sign-popup-blog').removeClass('sign-popup-blog-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+jQuery(document).ready(function(e){
+  jQuery('.book-prenotazione-blog-article').on('click', function(e) {
+    e.preventDefault();
+    jQuery('.sign-popup-blog-article').addClass('sign-popup-blog-article-active');
+    jQuery('body').css('overflow', 'hidden');
+    return false;
+  });
+  jQuery('.close-x').on('click', function() {
+    jQuery('.sign-popup-blog-article').removeClass('sign-popup-blog-article-active');
+    jQuery('body').css('overflow', 'auto');
+  });
+});
+</script>
  <script type="text/javascript">
  jQuery(document).ready(function(){
    jQuery('.checkbox-div-message').on('click', function() {
@@ -340,11 +382,39 @@ jQuery(document).ready(function(e){
    jQuery('.close-x').on('click', function() {
      jQuery('.textarea-container').removeClass('textarea-container-active');
      jQuery('.foresterie-form-signing').removeClass('foresterie-form-signing-active');
-     jQuery('.checkbox-component').css('display', 'block');
      jQuery('body').css('overflow', 'scroll-y');
+     jQuery('.checkbox-component').css('display', 'block');
+     jQuery('.checkbox-div-message').prop('checked', false);
    });
  });
-
  </script>
+ <script type="text/javascript">
+ jQuery(document).ready(function(){
+   jQuery('.foresterie-sign-popup').on('scroll', function(){
+     var scrollTriggerForm = 1;
+     var scrollPosForm = jQuery(document).scrollTop();
+
+     if (scrollPosForm > scrollTriggerForm) {
+       jQuery('.foresterie-form-signing').css('z-index', '101');
+     } else {
+       jQuery('.foresterie-form-signing').css('z-index', '99');
+     }
+   });
+ });
+ </script>
+ <script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery('.scrollTo').on('click', function(){
+			var section = jQuery(this).data('target');
+			jQuery('html, body').animate({
+				scrollTop: jQuery(section).offset().top
+			}, 1000)
+		})
+	});
+	jQuery('.section1').height(jQuery('.section1').height() + 75)
+</script>
+<script>
+jQuery('.calendar-form').dateDropper();
+</script>
 </body>
 </html>

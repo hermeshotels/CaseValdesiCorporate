@@ -20,7 +20,7 @@ get_header();
    </div>
  </div>
 </div>
-<div class="section1" id="section2-sostenibilita">
+<div class="section2" id="section2-sostenibilita">
  <div class="valign-wrapper">
    <div class="valign">
      <div class="cf0pad">
@@ -38,7 +38,9 @@ get_header();
                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'single_post_thumbnail' ); ?>
 			          <img src="img/slider/blank.gif" data-src="<?php echo $image[0]; ?>" alt="lorem ipsum dolor sit"/>
 				        <div class="ms-info">
-				        	<p><?php the_excerpt(); ?></p>
+                  <div class="container">
+                    <?php the_excerpt(); ?>
+                  </div>
 			        	</div>
 			        </div>
               <?php endwhile; ?>

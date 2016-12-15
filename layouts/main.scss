@@ -7,6 +7,27 @@
     font-weight: normal;
     font-style: normal;
 }
+@-webkit-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+ 40% {-webkit-transform: translateY(-30px);}
+ 60% {-webkit-transform: translateY(-15px);}
+}
+
+@-moz-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 40% {-moz-transform: translateY(-30px);}
+ 60% {-moz-transform: translateY(-15px);}
+}
+
+@-o-keyframes bounce {
+ 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+}
+.bounce {
+  animation: bounce 2s infinite;
+ -webkit-animation: bounce 2s infinite;
+ -moz-animation: bounce 2s infinite;
+ -o-animation: bounce 2s infinite;
+}
 /** Homepage Desktop **/
 body, html {
   height: 100%;
@@ -349,7 +370,7 @@ and (max-device-width : 568px) {
       .logo a {
         svg{
           width: 80px;
-          height: auto;
+          height: 80px;
           transition: all .5s ease-in-out;
           vertical-align: middle;
           path{
@@ -484,7 +505,7 @@ and (max-device-width : 568px) {
 .logo a {
   svg{
     width: 80px;
-    height: auto;
+    height: 80px;
     transition: all .5s ease-in-out;
     vertical-align: middle;
     path{
@@ -495,7 +516,7 @@ and (max-device-width : 568px) {
 .scrolled .logo a {
   svg{
     width: 80px;
-    height: auto;
+    height: 80px;
     transition: all .5s ease-in-out;
     vertical-align: middle;
     path{
@@ -605,9 +626,12 @@ and (max-device-width : 568px) {
     height: 30px;
     position: absolute;
     bottom: 2%;
+    left: 50%;
+    margin-left: -15px;
     transition: .2s;
     color: #fff;
     border-radius: 49.9999%;
+    border: 2px solid transparent;
     &:hover {
       transition: .2s;
       width: 30px;
@@ -620,8 +644,8 @@ and (max-device-width : 568px) {
 }
 .section1 {
   background: #e6eaed;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   overflow: hidden;
   h1 {
@@ -704,7 +728,7 @@ and (max-device-width : 568px) {
     text-transform: uppercase;
   }
 }
-.section3 {
+.section-map {
     position: relative;
     z-index: 9;
     height: 600px;
@@ -737,6 +761,7 @@ and (max-device-width : 568px) {
   text-align: center;
   font-size: 16px;
   transition: .5s;
+  color: #111111;
   &:hover {
     margin-left: 10px;
     transition: .5s;
@@ -769,7 +794,7 @@ and (max-device-width : 568px) {
   a {
     display: block;
     color: #e4c76b;
-    background: trasparent;
+    background: transparent;
     border-radius: 5px;
     border: 2px solid #e4c76b;
     padding: 10px 5px;
@@ -869,6 +894,9 @@ and (max-device-width : 568px) {
   border-top: 1px solid #fff;
   padding-bottom: 50px;
   padding-top: 30px;
+  ul {
+    list-style: none;
+  }
   h2 {
     font-weight: 300;
     font-size: 14px;
@@ -988,7 +1016,7 @@ and (max-device-width : 568px) {
     font-size: 14px;
     margin-top: 7px;
     color: #8db4bb;
-    border-right: 2px solid #8db4bb;
+    border-right: 1px solid #8db4bb;
     padding-right: 10px;
     margin-left: -20px;
     &.no-border {
@@ -1049,7 +1077,7 @@ and (max-device-width : 568px) {
     }
   }
 }
-.sign-popup, .information-popup, .gift-popup, .foresterie-sign-popup {
+.sign-popup, .information-popup, .gift-popup, .foresterie-sign-popup, .information-popup-book, .sign-popup-blog, .sign-popup-blog-article {
     display: none;
     width: 100%;
     height: 100%;
@@ -1060,10 +1088,10 @@ and (max-device-width : 568px) {
     z-index: 100;
     top: 0;
 }
-.sign-popup-active, .information-popup-active, .gift-popup-active, .foresterie-sign-popup-active {
+.sign-popup-active, .information-popup-active, .gift-popup-active, .foresterie-sign-popup-active, .information-popup-book-active, .sign-popup-blog-active, .sign-popup-blog-article-active {
   display: block;
 }
-.close-form img {
+.close-form  {
   width: 35px;
   height: 35px;
   border-radius: 49.9999%;
@@ -1073,6 +1101,13 @@ and (max-device-width : 568px) {
   right: -2%;
   background: #fff;
   cursor: pointer;
+  i {
+    color: #8db4bb;
+    font-size: 25px;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+  }
 }
 .textarea-container {
   display: none;
@@ -1083,22 +1118,18 @@ and (max-device-width : 568px) {
 .foresterie-close-form {
   position: absolute;
   width: 50%;
-  max-height: 20%;
-  top: 0;
+  max-height: 5%;
+  top: -84%;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
   margin: auto;
 }
-.foresterie-close-form img {
-  top: -160%;
-  right: -2%;
-}
 .foresterie-form-signing-active {
   overflow: auto;
 }
-.form-signing, .form-information, .form-gift, .foresterie-form-signing {
+.form-signing, .form-information, .form-gift, .foresterie-form-signing, .form-information-book, .form-signing-blog, .form-signing-blog-article  {
   position: absolute;
   width: 50%;
   max-height: 80%;
@@ -1134,6 +1165,12 @@ and (max-device-width : 568px) {
     width: 30px;
   }
 }
+.foresterie-form-signing {
+  max-height: 85%;
+}
+.icona-hover-foresterie {
+  margin-bottom: 20px;
+}
 .container-list-radio {
   display: block;
   margin: auto;
@@ -1158,6 +1195,9 @@ and (max-device-width : 568px) {
 }
 .calendar-form {
   margin-bottom: 0 !important;
+}
+.room-promotions {
+  margin-top: 2.7%;
 }
 .container-list-radio ul li{
   color: #fff !important;
@@ -1282,13 +1322,18 @@ option {
 #section2-foresterie {
   background: #e6eaed;
   padding-bottom: 70px !important;
+  .strutture-foresterie p {
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
   .title-section2-foresterie p {
     font-size: 24px;
+    padding-top: 30px;
   }
   img {
     width: auto;
     height: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
 }
 .contact-info {
@@ -1401,6 +1446,7 @@ option {
     font-size: 18px;
     color: #fff;
     padding-bottom: 15px;
+    text-transform: uppercase;
   }
 }
 .text-foto-hover {
@@ -1411,20 +1457,24 @@ option {
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 50px;
+    line-height: 25px;
   }
 }
 .service-foto-hover img {
-  height: 30px;
+  height: 35px;
   width: auto;
 }
 .service-foto-hover p {
-  font-size: 10px;
+  font-size: 10px !important;
   color: #fff;
   font-weight: 300;
-  height: 10px;
+  height: 30px;
 }
 .button-foto-hover {
   padding-top: 5%;
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
   a {
     display: block;
     color: #fff;
@@ -1462,6 +1512,8 @@ option {
 /** Sostenibilità Desktop **/
 #section1-sostenibilita, #section2-sostenibilita {
   background: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
   .title-section1-foresterie p {
     font-size: 24px;
   }
@@ -1536,15 +1588,11 @@ option {
     border: 2px solid #fff;
     border-radius: 5px;
     color: #fff;
-    width: 400px;
     font-style: normal;
     text-align: center;
-    margin: 0 auto;
-    margin-left: 15%;
   }
   .contact-newsletter input.submit-newsletter {
     padding: 15px;
-    width: 120px;
     height: auto;
     border-radius: 5px;
     background: #ffd522 !important;
@@ -1552,7 +1600,6 @@ option {
     border: none !important;
     box-shadow: none !important;
     font-size: 14px;
-    margin-left: 50px;
     margin-bottom: 200px;
     &:hover {
       background: #f1c920 !important;
@@ -1603,7 +1650,7 @@ option {
   margin-bottom: 30px;
 }
 .submit-foresterie {
-  margin-top: 13%;
+  margin-top: -5%;
 }
 
   /** Blog Desktop **/
@@ -1687,7 +1734,7 @@ option {
   padding-left: 80px;
   .about-blog {
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: normal;
       text-transform: none;
       color: #71989e;
@@ -1697,28 +1744,28 @@ option {
       font-size: 16px;
       font-weight: 300;
       margin-top: 30px;
+      margin-bottom: 20px;
       font-style: italic;
     }
   }
   .last-comment-fb {
     border-top: 1px solid #d8d8d8;
-    margin-top: 60px;
-    padding-top: 50px;
+    padding-top: 0;
     h2 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: normal;
       text-transform: none;
       color: #71989e;
       margin-bottom: 50px;
     }
     img {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       border-radius: 49.9999%;
     }
     p {
       color: #8a8a8a;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 300;
       font-style: italic;
       margin-bottom: 0;
@@ -1727,7 +1774,7 @@ option {
         font-weight: 300;
         color: #c4c4c4;
         font-size: 18px;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -1738,12 +1785,16 @@ option {
     padding-bottom: 30px;
     h2 {
       margin-bottom: 30px !important;
+      font-size: 20px;
     }
     p {
       padding-top: 7px;
       font-style: normal;
       font-weight: 500;
       color: #71989e;
+    }
+    .rss {
+      margin-top: 20px;
     }
   }
   .social-link-sidebar {
@@ -1756,7 +1807,7 @@ option {
     border: 2px solid #b0b0b0;
     padding-top: 10px;
     font-size: 11px;
-    margin-left: 10px;
+    margin-left: 20px;
     &:hover {
       background: #fed43c !important;
       border: 2px solid #fed43c;
@@ -1766,8 +1817,9 @@ option {
 .tag-sidebar {
   margin-top: 0;
   h2 {
-    color: #717171 !important;
+    color: #71989e;
     margin-bottom: 20px !important;
+    font-size: 20px;
   }
   a {
     text-align: center;
@@ -1793,6 +1845,7 @@ option {
   padding-bottom: 30px;
   h2 {
     margin-bottom: 20px !important;
+    font-size: 20px;
   }
   .input-mail-sidebar, .submit-sidebar {
     background: none !important;
@@ -1808,6 +1861,7 @@ option {
     border-radius: 0 !important;
     width: 100px;
     color: #b0b0b0;
+    margin-left: 15px;
       &:hover {
       background: #fed43c !important;
       border: 2px solid #fed43c;
@@ -1817,6 +1871,7 @@ option {
 .book-sidebar {
   h2 {
     margin-bottom: 20px !important;
+    font-size: 20px;
   }
   a {
     text-align: center;
@@ -1835,6 +1890,9 @@ option {
       border: 2px solid #fed43c;
     }
   }
+}
+.tag-link-sidebar {
+  margin-left: -15px;
 }
 .pagination-link {
   margin-top: 50px;
@@ -2060,7 +2118,7 @@ option {
   .navbar-brand {
     svg{
       width: 50px;
-      height: auto;
+      height: 50px;
       transition: all .5s ease-in-out;
       margin-top: -10px;
       path{
@@ -2142,10 +2200,11 @@ option {
     display: none;
   }
   .central-logo {
-    margin-top: -70px;
+    margin-top: 140px;
     img {
       width: 250px;
       height: auto;
+      margin-left: -125px;
     }
     h1 {
       font-size: 44px;
@@ -2153,6 +2212,7 @@ option {
   }
   .scrolldown-page {
     margin-top: 30px !important;
+    margin-left: -15px;
   }
   .section1 .cf-custom-section1 {
     padding-left: 15px;
@@ -2167,10 +2227,14 @@ option {
     height: 100% !important;
     background-position: 180px 400px !important;
     overflow: hidden;
+    display: none;
   }
   .cf-custom-third-image-section4, .bottom-footer .cf-footer, .first-image-section4 p {
     padding-left: 5% !important;
     padding-right: 5% !important;
+  }
+  .first-image-section4 {
+    border-right: none;
   }
   .first-image-section4 h2 {
     padding-top: 0;
@@ -2193,7 +2257,7 @@ option {
       height: auto;
       margin-bottom: 50px;
       float: none;
-      margin-right: 50px;
+      margin-right: 0 !important;
       &.second-logo-footer {
         width: 204px;
         height: auto;
@@ -2204,10 +2268,17 @@ option {
   .menu-footer {
     display: none !important;
   }
+  .membri-footer ul {
+    margin-left: 0;
+  }
   .bottom-footer p {
     border-right: none !important;
     padding-right: 0;
     margin-left: 0;
+  }
+  .social-footer {
+    border-right: none;
+    border-left: none;
   }
   .social-footer ul {
     margin-left: 0 !important;
@@ -2220,16 +2291,16 @@ option {
     margin-bottom: 20px;
   }
   .img-allineate-right {
-    display: inherit !important;
+    display: block;
     margin-left: 0  !important;
     margin: 0 auto !important;
-    margin-bottom: 50px !important;
+    float: none;
   }
   .img-allineate-left {
     float: none !important;
     margin-left: 0 auto !important;
     margin: 0 auto !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 20px !important;
   }
   .section1 {
     h1 {
@@ -2239,7 +2310,7 @@ option {
       font-size: 24px;
     }
     p {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .img-categoria, .img-categoria1, .img-categoria2, .img-categoria3 {
@@ -2262,8 +2333,41 @@ option {
     font-size: 16px;
     }
   }
+  .third-image-section4 {
+    height: 520px;
+  }
+  .form-signing, .form-information, .form-gift, .foresterie-form-signing {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+  .form-group {
+    margin-bottom: 2px;
+  }
+  .form-signing .form-control, .form-information .form-control, .form-gift .form-control, .foresterie-form-signing .form-control {
+    height: 30px;
+  }
+  .form-signing legend, .form-information legend, .form-gift legend, .foresterie-form-signing legend {
+    font-size: 14px !important;
+  }
+  .container-list-radio ul {
+    margin-top: 1% !important;
+    li {
+      height: 50px !important;
+    }
+  }
+  .submit-form-popup {
+    margin-top: 10px !important;
+  }
+  .close-form {
+    background: none;
+    top: 0;
+    right: 3%;
+    i {
+      color: #fff;
+    }
+  }
 }
-
 
 
 /** Foresterie Mobile **/
@@ -2306,16 +2410,17 @@ option {
       }
     }
 }
+
   .button-foto-hover a {
     display: block;
     color: #fff;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     border-radius: 49.9999%;
     border: 2px solid #fff;
     text-align: center;
-    padding-top: 40%;
-    font-size: 20px;
+    line-height: 60px;
+    font-size: 13px;
     margin: 0 auto;
     &:hover {
       background: #fff !important;
@@ -2324,7 +2429,7 @@ option {
 }
 .title-foto-hover h2 {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     margin-top: 10px !important;
     padding-top: 0 !important;
@@ -2341,7 +2446,8 @@ option {
   color: #fff;
 }
 .text-foto-hover p {
-  padding-top: 40px !important;
+  padding-top: 5px;
+  margin-bottom: 15px;
 }
 #section1-foresterie .title-section1-foresterie p, #section2-foresterie .title-section2-foresterie p {
   font-size: 20px;
@@ -2350,7 +2456,7 @@ option {
   margin-bottom: 0;
 }
 .contact-info a {
-  font-size: 16px;
+  font-size: 14px;
 }
 #section3-foresterie h2 {
   margin-bottom: 10px !important;
@@ -2360,6 +2466,16 @@ option {
     margin: 0 auto;
     margin-top: 55%;
     margin-bottom: 2%;
+  }
+  .foresterie-close-form {
+    top: -80%;
+  }
+  .foresterie-close-form .close-x i {
+    top: -90%;
+    left: 230%;
+  }
+  .submit-foresterie {
+    margin-top: -2%;
   }
 }
 
@@ -2402,10 +2518,26 @@ option {
     padding: 0 !important;
   }
   .blog-right {
-    padding-left: 0 !important;
-    .last-comment-fb img {
-      width: 50px;
-      height: 50px;
+    padding-left: 15px !important;
+    .about-blog p {
+      text-align: center;
+      font-size: 14px;
+    }
+    .last-comment-fb {
+      margin-top: 15px;
+      padding-top: 15px;
+      img {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+      }
+      p {
+        text-align: center;
+        font-size: 14px;
+        &.firma {
+          font-size: 14px;
+        }
+      }
     }
     .social-sidebar .rss {
       margin-top: 20px;
@@ -2414,6 +2546,7 @@ option {
       width: 40px;
       height: 40px;
       padding-top: 8px;
+      margin-left: 10px;
     }
     .newsletter-sidebar .submit-sidebar {
       margin-top: 30px;
@@ -2421,6 +2554,8 @@ option {
   }
   .blog-right .about-blog h2, .blog-right .last-comment-fb h2, .blog-right .tag-sidebar h2, .blog-right .newsletter-sidebar h2, .blog-right .book-sidebar h2 {
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
   }
   .pagination-number-container {
     ul {
@@ -2430,6 +2565,12 @@ option {
         padding-left: 0 !important;
       }
     }
+  }
+  .newsletter-sidebar .submit-sidebar {
+    margin-left: 0;
+  }
+  .tag-link-sidebar {
+    margin-left: 0;
   }
 }
 
